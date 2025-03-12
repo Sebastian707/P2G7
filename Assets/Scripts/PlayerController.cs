@@ -15,22 +15,16 @@ public class PlayerController : MonoBehaviour
     }
     private void Update()
     {
-        Movement();
-
-    }
-
-
-    private void Movement()
-    {
-       // Ray2D ray = new Ray2D(transform.position, transform.right * Input.GetAxis("Horizontal") * movementSpeed * Time.deltaTime);
-        
-        transform.position += transform.right * Input.GetAxis("Horizontal") *movementSpeed* Time.deltaTime;
-
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
         {
             Rb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
 
         }
+    }
+    private void FixedUpdate()
+    {
+        Rb.position += Vector2.right * Input.GetAxis("Horizontal") * movementSpeed * Time.deltaTime;
+
     }
 
     public bool IsGrounded()
