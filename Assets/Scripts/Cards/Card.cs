@@ -11,13 +11,8 @@ public class Card : MonoBehaviour
     public int cost;
     public int power;
     public string cardDescription;
-
-
-    public Card()
-    {
-
-    }
-
+    public ICardEffect effect;
+    
     public Card(int Id, string CardName, int Cost, int Power, string CardDescription)
     {
         this.id = Id;
@@ -26,4 +21,17 @@ public class Card : MonoBehaviour
         this.power = Power;
         this.cardDescription = CardDescription;
     }
+
+    public void PlayCard(Character target)
+{
+    if (effect != null)
+    {
+        effect.ApplyEffect(target);
+        Debug.Log(target.characterName + " affected by " + cardName);
+    }
+    else
+        {
+            Debug.Log("No effect assigned to " + cardName);
+        }
+}
 }
