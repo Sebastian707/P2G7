@@ -28,6 +28,7 @@ public class Card : MonoBehaviour
     }
     public void UseCard()
     {
+        //maybe change it to get the components in code instead of someone needing to place it into an array. that way there's no confusion if there's more than 1 instance of the same script (since it can't be renamed so hard to tell if you put the same instance twice or 1 of each)
         foreach (CardEffect effect in Effects)
         {
             effect.Use();
