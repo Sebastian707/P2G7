@@ -4,25 +4,21 @@ using UnityEngine;
 public class Card2 : ScriptableObject
 {
     public string cardName;
-    public string description;
-    public CardType type;
     public int cost;
+    public CardType type;
     public Sprite artwork;
-    public ICardEffect effect;
-    public enum CardType
-{
-    Attack,
-    Defense,
-    Buff,
-    Debuff,
-    Special
-}
+    public CardEffect effect;
 
     public void PlayCard(Character target)
     {
         if (effect != null)
         {
             effect.ApplyEffect(target);
+            Debug.Log(cardName + " was played!");
+        }
+        else
+        {
+            Debug.Log("No effect assigned to this card.");
         }
     }
 }
