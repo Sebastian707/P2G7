@@ -13,6 +13,10 @@ PrefabInstance:
       value: Draw2
       objectReference: {fileID: 0}
     - target: {fileID: 3681536999527297674, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
+      propertyPath: description
+      value: Draw 2 cards
+      objectReference: {fileID: 0}
+    - target: {fileID: 3681536999527297674, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
       propertyPath: Effects.Array.size
       value: 2
       objectReference: {fileID: 0}

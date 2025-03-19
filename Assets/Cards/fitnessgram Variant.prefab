@@ -24,13 +24,21 @@ PrefabInstance:
       value: The FitnessGram Pacer test
       objectReference: {fileID: 0}
     - target: {fileID: 3681536999527297674, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
+      propertyPath: description
+      value: lets you draw 2 draw 2 cards
+      objectReference: {fileID: 0}
+    - target: {fileID: 3681536999527297674, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
       propertyPath: Effects.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3681536999527297674, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
       propertyPath: 'Effects.Array.data[0]'
       value: 
       objectReference: {fileID: 8731450412116007194}
+    - target: {fileID: 3681536999527297674, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
+      propertyPath: 'Effects.Array.data[1]'
+      value: 
+      objectReference: {fileID: -328627170570777085}
     - target: {fileID: 5912879948911597768, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
       propertyPath: m_Name
       value: fitnessgram Variant
@@ -122,6 +130,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5912879948911597768, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8731450412116007194}
+    - targetCorrespondingSourceObject: {fileID: 5912879948911597768, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -328627170570777085}
   m_SourcePrefab: {fileID: 100100000, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
 --- !u!1 &3805804527256993342 stripped
 GameObject:
@@ -148,3 +159,17 @@ MonoBehaviour:
     line, and run as long as possible. The second time you fail to complete a lap
     before the sound, your test is over. The test will begin on the word start. On
     your mark, get ready, start.
+--- !u!114 &-328627170570777085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3805804527256993342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb5e70c0ad054b4bb7651aeae74f8fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amount: 2
+  drawnCard: {fileID: 2702823175694003557, guid: d50c928bd07501548b6974e97ada3f8c, type: 3}

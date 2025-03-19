@@ -1,11 +1,9 @@
-using UnityEngine;
-
 public class DrawEffect : CardEffect
 {
     public int drawnCards = 5;
-    public override void Use(CardPlayerScript cardPlayer)
+    public override void Use()
     {
-        cardPlayer.DrawCard(drawnCards);
-       
+        CardPlayerScript.instance.DrawCard(drawnCards);
+
     }
 }

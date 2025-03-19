@@ -1,30 +1,37 @@
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
 public class Card : MonoBehaviour
-{  
+{
+
     
-    private CardPlayerScript cardPlayer;
     public string cardName;
+    public string description;
     public int cost;
     public CardEffect[] Effects;
-    
+    // references
+    [SerializeField] private TextMeshProUGUI nameText;
+    [SerializeField] private TextMeshProUGUI DescriptionText;
+    [SerializeField] private TextMeshProUGUI costText;
+
     private void Start()
     {
-        cardPlayer = GetComponentInParent<CardPlayerScript>();
-        GetComponentInChildren<TextMeshProUGUI>().text = cardName;
+
+        nameText.text = cardName;
+        DescriptionText.text = description;
+        costText.text = $"{cost} energy";
+        
     }
     public void ButtonPress()
     {
-        cardPlayer.SpendCard(this);
+        CardPlayerScript.instance.SpendCard(this);
     }
     public void UseCard()
     {
-        foreach( CardEffect effect in Effects)
+        foreach (CardEffect effect in Effects)
         {
-            effect.Use(cardPlayer);
+            effect.Use();
         }
-        cardPlayer.DrawCard();
         Destroy(gameObject);
     }
 }
