@@ -11,7 +11,7 @@ public class CardPlayerScript : MonoBehaviour
     private void Start()
     {
         energyText.text= $"{energy}/{maxEnergy} energy";
-        DrawCard(5);
+        DrawCard(1,deck[0]);
     }
     public void DrawCard(int amount =1,GameObject drawnCard = null)
     {
@@ -24,7 +24,9 @@ public class CardPlayerScript : MonoBehaviour
     {
         if (card.cost > energy) return;
         energy -= card.cost;
+        energyText.text = $"{energy}/{maxEnergy} energy";
         card.UseCard();
+
         
         
     }

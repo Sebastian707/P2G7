@@ -515,7 +515,9 @@ MonoBehaviour:
   maxEnergy: 4
   energy: 4
   deck:
+  - {fileID: 2702823175694003557, guid: d50c928bd07501548b6974e97ada3f8c, type: 3}
   - {fileID: 5205821128619978887, guid: 3f3420490490b3d4eba5b3e8003042cc, type: 3}
+  - {fileID: 3805804527256993342, guid: 4b0b84d05a102724a9ef5a5b3aee975d, type: 3}
   - {fileID: 9117610389690281227, guid: 3d073c3ea46235a49b91bbe31d228371, type: 3}
   energyText: {fileID: 510410845}
 --- !u!114 &1715963898

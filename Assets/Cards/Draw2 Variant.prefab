@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &1887023913082955855
+--- !u!1001 &8614435731014219181
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -9,30 +9,32 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3681536999527297674, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
-      propertyPath: cost
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3681536999527297674, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
-      propertyPath: speech
-      value: You've been given orders, you've been given time, you've been given
-        more leeway than most. and yet i find this planet unprepared for the arrival
-        of the viltrum empire
-      objectReference: {fileID: 0}
-    - target: {fileID: 3681536999527297674, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
       propertyPath: cardName
-      value: Conquest
+      value: Draw2
       objectReference: {fileID: 0}
     - target: {fileID: 3681536999527297674, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
       propertyPath: Effects.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3681536999527297674, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
+      propertyPath: effects.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3681536999527297674, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
       propertyPath: 'Effects.Array.data[0]'
       value: 
-      objectReference: {fileID: -5575013431972098727}
+      objectReference: {fileID: 8689481130159630185}
+    - target: {fileID: 3681536999527297674, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
+      propertyPath: 'Effects.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1629080047374849218}
+    - target: {fileID: 3681536999527297674, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
+      propertyPath: 'effects.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1629080047374849218}
     - target: {fileID: 5912879948911597768, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
       propertyPath: m_Name
-      value: Conquest Variant
+      value: Draw2 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8963663435694078884, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
       propertyPath: m_Pivot.x
@@ -120,23 +122,39 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5912879948911597768, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -5575013431972098727}
+      addedObject: {fileID: 1629080047374849218}
+    - targetCorrespondingSourceObject: {fileID: 5912879948911597768, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8689481130159630185}
   m_SourcePrefab: {fileID: 100100000, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
---- !u!1 &5205821128619978887 stripped
+--- !u!1 &2702823175694003557 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5912879948911597768, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
-  m_PrefabInstance: {fileID: 1887023913082955855}
+  m_PrefabInstance: {fileID: 8614435731014219181}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &-5575013431972098727
+--- !u!114 &1629080047374849218
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5205821128619978887}
+  m_GameObject: {fileID: 2702823175694003557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5440125931f8294fa55e7a1b0712de7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drawnCards: 2
+--- !u!114 &8689481130159630185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2702823175694003557}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 416e595b51276a44fbd6eee5d42d63c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugText: I want to thank you mark
+  debugText: you just drew 2 cards!

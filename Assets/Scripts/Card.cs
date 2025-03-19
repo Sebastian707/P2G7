@@ -7,7 +7,8 @@ public class Card : MonoBehaviour
     private CardPlayerScript cardPlayer;
     public string cardName;
     public int cost;
-    public string speech;
+    public CardEffect[] Effects;
+    
     private void Start()
     {
         cardPlayer = GetComponentInParent<CardPlayerScript>();
@@ -19,7 +20,10 @@ public class Card : MonoBehaviour
     }
     public void UseCard()
     {
-        Debug.Log(speech);
+        foreach( CardEffect effect in Effects)
+        {
+            effect.Use(cardPlayer);
+        }
         cardPlayer.DrawCard();
         Destroy(gameObject);
     }
