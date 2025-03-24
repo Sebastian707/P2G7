@@ -72,7 +72,7 @@ public class PlayerController : MonoBehaviour
             }
             else if (canDoubleJump && doubleJumpsLeft > 0)
             {
-                Rb.velocity = new Vector2(Rb.velocity.x, 0);
+                Rb.linearVelocity = new Vector2(Rb.linearVelocity.x, 0);
                 Rb.AddForce(Vector2.up * doubleJumpForce, ForceMode2D.Impulse);
                 doubleJumpsLeft--; 
             }
@@ -104,7 +104,7 @@ public class PlayerController : MonoBehaviour
         if (!isDashing)
         {
             lastHorizontalInput = horizontalMovement; 
-            Rb.velocity = new Vector2(horizontalMovement * movementSpeed, Rb.velocity.y); 
+            Rb.linearVelocity = new Vector2(horizontalMovement * movementSpeed, Rb.linearVelocity.y); 
         }
     }
 
@@ -118,7 +118,7 @@ public class PlayerController : MonoBehaviour
 
             Rb.gravityScale = 0f;
 
-            Rb.velocity = new Vector2(Rb.velocity.x, 0);
+            Rb.linearVelocity = new Vector2(Rb.linearVelocity.x, 0);
 
             Vector2 dashDirection = new Vector2(Rb.velocity.x, 0).normalized;
 
@@ -126,7 +126,7 @@ public class PlayerController : MonoBehaviour
             {
                 dashDirection = isFacingRight ? Vector2.right : Vector2.left;
             }
-            Rb.velocity = new Vector2(dashDirection.x * dashDistance, Rb.velocity.y);
+            Rb.linearVelocity = new Vector2(dashDirection.x * dashDistance, Rb.linearVelocity.y);
 
             Invoke("EndDash", dashDuration); 
         }

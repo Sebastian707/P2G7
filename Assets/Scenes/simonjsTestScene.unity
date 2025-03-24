@@ -835,6 +835,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 5
   jumpForce: 3
+  doubleJumpForce: 2.5
+  maxDoubleJumps: 1
+  canDoubleJump: 1
+  CanDash: 1
+  dashDistance: 1
+  dashDuration: 0.5
+  dashCooldown: 2
+  maxDashCharges: 3
+  chargeRestoreRate: 1
+  dashText: {fileID: 0}
 --- !u!50 &1795501037
 Rigidbody2D:
   serializedVersion: 5
