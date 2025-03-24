@@ -1,0 +1,163 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &3208399856892753347
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3681536999527297674, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
+      propertyPath: speech
+      value: THIS ISN'T ABOUT ME
+      objectReference: {fileID: 0}
+    - target: {fileID: 3681536999527297674, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
+      propertyPath: cardName
+      value: omniman
+      objectReference: {fileID: 0}
+    - target: {fileID: 3681536999527297674, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
+      propertyPath: description
+      value: deals 1 damage
+      objectReference: {fileID: 0}
+    - target: {fileID: 3681536999527297674, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
+      propertyPath: Effects.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3681536999527297674, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
+      propertyPath: 'Effects.Array.data[0]'
+      value: 
+      objectReference: {fileID: 3801508161949054618}
+    - target: {fileID: 3681536999527297674, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
+      propertyPath: 'Effects.Array.data[1]'
+      value: 
+      objectReference: {fileID: -1645084116764012339}
+    - target: {fileID: 5912879948911597768, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
+      propertyPath: m_Name
+      value: omniman
+      objectReference: {fileID: 0}
+    - target: {fileID: 8963663435694078884, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8963663435694078884, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8963663435694078884, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8963663435694078884, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8963663435694078884, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8963663435694078884, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8963663435694078884, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8963663435694078884, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8963663435694078884, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8963663435694078884, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8963663435694078884, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8963663435694078884, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8963663435694078884, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8963663435694078884, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8963663435694078884, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8963663435694078884, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8963663435694078884, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8963663435694078884, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8963663435694078884, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8963663435694078884, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5912879948911597768, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -1645084116764012339}
+    - targetCorrespondingSourceObject: {fileID: 5912879948911597768, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3801508161949054618}
+  m_SourcePrefab: {fileID: 100100000, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
+--- !u!1 &9117610389690281227 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5912879948911597768, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
+  m_PrefabInstance: {fileID: 3208399856892753347}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-1645084116764012339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9117610389690281227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 416e595b51276a44fbd6eee5d42d63c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debugText: WHY DID YOU MAKE ME DO THIS?! YOU'RE FIGHTING SO YOU CAN SEE EVERYONE
+    AROUND YOU DIE! THINK, MARK! YOULL OUTLAST EVERY FRAGILE INSIGNIFICANT BEING
+    ON THIS PLANET! YOU'LL LIVE TO SEE THIS PLANET CRUMBLE TO DUST AND BLOW AWAY!
+    EVERYONE AND EVERYTHING YOU KNOW WILL BE GONE. WHAT WILL YOU HAVE AFTER 500 YEARS?!
+--- !u!114 &3801508161949054618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9117610389690281227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fd03a38d4e3dba468bb5e89ae5249ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 1
