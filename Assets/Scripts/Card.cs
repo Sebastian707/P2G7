@@ -8,7 +8,7 @@ public class Card : MonoBehaviour
     public string cardName;
     public string description;
     public int cost;
-    public CardEffect[] Effects;
+    private CardEffect[] Effects;
     // references
     [SerializeField] private TextMeshProUGUI nameText;
     [SerializeField] private TextMeshProUGUI DescriptionText;
@@ -16,7 +16,7 @@ public class Card : MonoBehaviour
 
     private void Start()
     {
-
+        Effects = GetComponents<CardEffect>();
         nameText.text = cardName;
         DescriptionText.text = description;
         costText.text = $"{cost} energy";
@@ -28,7 +28,7 @@ public class Card : MonoBehaviour
     }
     public void UseCard()
     {
-        //maybe change it to get the components in code instead of someone needing to place it into an array. that way there's no confusion if there's more than 1 instance of the same script (since it can't be renamed so hard to tell if you put the same instance twice or 1 of each)
+        
         foreach (CardEffect effect in Effects)
         {
             effect.Use();
