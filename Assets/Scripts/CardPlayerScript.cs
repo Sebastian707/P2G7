@@ -48,11 +48,12 @@ public class CardPlayerScript : MonoBehaviour
         energyText.text = $"{energy}/{maxEnergy} energy";
         DrawCard(1, deck[0]);
     }
-    public void DrawCard(int amount = 1, GameObject drawnCard = null)
+    public void DrawCard(int amount = 1, GameObject cardPrefab = null)
     {
+        GameObject drawnCard = cardPrefab;
         if (drawnCard == null) drawnCard = deck[Random.Range(0, deck.Length)];
         GameObject newCard = Instantiate(drawnCard, transform);
-        if (amount > 1) DrawCard(amount - 1);
+        if (amount > 1) DrawCard(amount - 1,cardPrefab);
 
     }
     public void SpendCard(Card card)
