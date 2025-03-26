@@ -10,6 +10,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float jumpForce = 3;
     [SerializeField] private float doubleJumpForce = 2.5f; 
     [SerializeField] private int maxDoubleJumps = 1;
+    [SerializeField] private float varJump = 0.5f;
+
+    [SerializeField] private float coyoteTime = 0.2f;
+    private float CoyoteTimeCounter;
+
+    private float jumpBufferTime = 0.2f;
+    private float jumpBufferCounter;
 
     private new Collider2D collider;
     private Rigidbody2D Rb;
@@ -50,34 +57,57 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    [System.Obsolete]
     private void Update()
     {
-        float horizontalMovement = Input.GetAxis("Horizontal");
-        if (horizontalMovement > 0 && !isFacingRight)
+        if (IsGrounded())
         {
-            Flip(); 
+            CoyoteTimeCounter = coyoteTime;
         }
-        else if (horizontalMovement < 0 && isFacingRight)
+        else
         {
-            Flip();
+            CoyoteTimeCounter -= Time.deltaTime;
         }
-
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (IsGrounded())
+
+            jumpBufferCounter = jumpBufferTime;
+
+        }
+        else
+        {
+            jumpBufferCounter -= Time.deltaTime;
+        }
+
+
+        float horizontalMovement = Input.GetAxis("Horizontal");
+        if (horizontalMovement > 0 && !isFacingRight) Flip();
+        else if (horizontalMovement < 0 && isFacingRight) Flip();
+
+        if (jumpBufferCounter > 0f)
+        {
+            if (CoyoteTimeCounter > 0f)
             {
-                Rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-                doubleJumpsLeft = maxDoubleJumps; 
+                Rb.linearVelocity = new Vector2(Rb.linearVelocity.x, jumpForce);
+                doubleJumpsLeft = maxDoubleJumps;
+                jumpBufferCounter = 0f;
+
             }
             else if (canDoubleJump && doubleJumpsLeft > 0)
             {
-                Rb.linearVelocity = new Vector2(Rb.linearVelocity.x, 0);
-                Rb.AddForce(Vector2.up * doubleJumpForce, ForceMode2D.Impulse);
-                doubleJumpsLeft--; 
+                Rb.linearVelocity = new Vector2(Rb.linearVelocity.x, doubleJumpForce);
+                doubleJumpsLeft--;
+              
             }
         }
 
+        if (Input.GetKeyUp(KeyCode.Space) && Rb.linearVelocity.y > 0)
+        {
+            Rb.linearVelocity = new Vector2(Rb.linearVelocity.x, (float)(Rb.linearVelocity.y * varJump));
+
+            CoyoteTimeCounter = 0f;
+        }
+
+  
         if (CanDash && currentDashCharges > 0 && Input.GetKeyDown(KeyCode.LeftShift) && !isDashing)
         {
             Dash();
@@ -108,7 +138,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    [System.Obsolete]
     private void Dash()
     {
         if (CanDash && currentDashCharges > 0)
@@ -120,7 +149,7 @@ public class PlayerController : MonoBehaviour
 
             Rb.linearVelocity = new Vector2(Rb.linearVelocity.x, 0);
 
-            Vector2 dashDirection = new Vector2(Rb.velocity.x, 0).normalized;
+            Vector2 dashDirection = new Vector2(Rb.linearVelocity.x, 0).normalized;
 
             if (dashDirection.x == 0)
             {
@@ -142,7 +171,6 @@ public class PlayerController : MonoBehaviour
     private void Flip()
     {
         isFacingRight = !isFacingRight;
-        transform.Rotate(0f, 180f, 0f); 
     }
 
     public bool IsGrounded()
