@@ -8,9 +8,10 @@ public class PlayerController : MonoBehaviour
 
     [Header("Jump Settings")]
     [SerializeField] private float jumpForce = 3;
-    [SerializeField] private float doubleJumpForce = 2.5f; 
+    [SerializeField] private float doubleJumpForce = 2.5f;
     [SerializeField] private int maxDoubleJumps = 1;
     [SerializeField] private float varJump = 0.5f;
+    [SerializeField] private float maxFallSpeed = -10f; // Clamped fall speed
 
     [SerializeField] private float coyoteTime = 0.2f;
     private float CoyoteTimeCounter;
@@ -21,7 +22,6 @@ public class PlayerController : MonoBehaviour
     private new Collider2D collider;
     private Rigidbody2D Rb;
 
-   
     [SerializeField] private bool canDoubleJump = false;
     private int doubleJumpsLeft = 0;
 
@@ -39,8 +39,8 @@ public class PlayerController : MonoBehaviour
 
     public TextMeshProUGUI dashText;
 
-    private float lastHorizontalInput = 0; 
-    private bool isFacingRight = true; 
+    private float lastHorizontalInput = 0;
+    private bool isFacingRight = true;
 
     private void OnValidate()
     {
@@ -69,15 +69,12 @@ public class PlayerController : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
-
             jumpBufferCounter = jumpBufferTime;
-
         }
         else
         {
             jumpBufferCounter -= Time.deltaTime;
         }
-
 
         float horizontalMovement = Input.GetAxis("Horizontal");
         if (horizontalMovement > 0 && !isFacingRight) Flip();
@@ -90,24 +87,20 @@ public class PlayerController : MonoBehaviour
                 Rb.linearVelocity = new Vector2(Rb.linearVelocity.x, jumpForce);
                 doubleJumpsLeft = maxDoubleJumps;
                 jumpBufferCounter = 0f;
-
             }
             else if (canDoubleJump && doubleJumpsLeft > 0)
             {
                 Rb.linearVelocity = new Vector2(Rb.linearVelocity.x, doubleJumpForce);
                 doubleJumpsLeft--;
-              
             }
         }
 
         if (Input.GetKeyUp(KeyCode.Space) && Rb.linearVelocity.y > 0)
         {
-            Rb.linearVelocity = new Vector2(Rb.linearVelocity.x, (float)(Rb.linearVelocity.y * varJump));
-
+            Rb.linearVelocity = new Vector2(Rb.linearVelocity.x, Rb.linearVelocity.y * varJump);
             CoyoteTimeCounter = 0f;
         }
 
-  
         if (CanDash && currentDashCharges > 0 && Input.GetKeyDown(KeyCode.LeftShift) && !isDashing)
         {
             Dash();
@@ -128,13 +121,14 @@ public class PlayerController : MonoBehaviour
         }
         else if (dashText != null)
         {
-            dashText.text = ""; 
+            dashText.text = "";
         }
 
         if (!isDashing)
         {
-            lastHorizontalInput = horizontalMovement; 
-            Rb.linearVelocity = new Vector2(horizontalMovement * movementSpeed, Rb.linearVelocity.y); 
+            lastHorizontalInput = horizontalMovement;
+            Rb.linearVelocity = new Vector2(horizontalMovement * movementSpeed, Mathf.Max(Rb.linearVelocity.y, maxFallSpeed)); // Apply clamped fall speed
+            Debug.Log("Current Fall Speed: " + Rb.linearVelocity.y);
         }
     }
 
@@ -146,7 +140,6 @@ public class PlayerController : MonoBehaviour
             currentDashCharges--;
 
             Rb.gravityScale = 0f;
-
             Rb.linearVelocity = new Vector2(Rb.linearVelocity.x, 0);
 
             Vector2 dashDirection = new Vector2(Rb.linearVelocity.x, 0).normalized;
@@ -157,14 +150,13 @@ public class PlayerController : MonoBehaviour
             }
             Rb.linearVelocity = new Vector2(dashDirection.x * dashDistance, Rb.linearVelocity.y);
 
-            Invoke("EndDash", dashDuration); 
+            Invoke("EndDash", dashDuration);
         }
     }
 
     private void EndDash()
     {
         Rb.gravityScale = 1f;
-
         isDashing = false;
     }
 
@@ -190,7 +182,6 @@ public class PlayerController : MonoBehaviour
     {
         CanDash = enable;
     }
-
 
     private void OnDrawGizmos()
     {
