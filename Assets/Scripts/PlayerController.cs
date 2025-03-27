@@ -5,38 +5,37 @@ public class PlayerController : MonoBehaviour
 {
     [Header("Movement Settings")]
     [SerializeField] private float movementSpeed = 5;
+    [SerializeField] private float acceleration = 10f;
+    [SerializeField] private float airAcceleration = 5f;
+    [SerializeField] private float deceleration = 15f;
+    [SerializeField] private float airDeceleration = 7f;
 
     [Header("Jump Settings")]
     [SerializeField] private float jumpForce = 3;
     [SerializeField] private float doubleJumpForce = 2.5f;
     [SerializeField] private int maxDoubleJumps = 1;
     [SerializeField] private float varJump = 0.5f;
-    [SerializeField] private float maxFallSpeed = -10f; // Clamped fall speed
-
+    [SerializeField] private float maxFallSpeed = -10f;
+    [SerializeField] private float lowJumpMultiplier = 2f;
+    [SerializeField] private float fallMultiplier = 2.5f;
     [SerializeField] private float coyoteTime = 0.2f;
     private float CoyoteTimeCounter;
-
     private float jumpBufferTime = 0.2f;
     private float jumpBufferCounter;
-
     private new Collider2D collider;
     private Rigidbody2D Rb;
-
     [SerializeField] private bool canDoubleJump = false;
     private int doubleJumpsLeft = 0;
 
     [Header("Dash settings")]
     [SerializeField] private bool CanDash = false;
-    public float dashDistance = 5f;
-    public float dashDuration = 0.5f;
-    public float dashCooldown = 2f;
-    public int maxDashCharges = 3;
-    public float chargeRestoreRate = 1f;
-
+    [SerializeField] private float dashDistance = 5f;
+    [SerializeField] private float dashDuration = 0.5f;
+    [SerializeField] private int maxDashCharges = 3;
+    [SerializeField] private float chargeRestoreRate = 1f;
     private int currentDashCharges;
     private bool isDashing = false;
     private float dashStartTime;
-
     public TextMeshProUGUI dashText;
 
     private float lastHorizontalInput = 0;
@@ -59,6 +58,16 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+
+        if (Rb.linearVelocity.y < 0)
+        {
+            Rb.linearVelocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+        }
+        else if (Rb.linearVelocity.y > 0 && !Input.GetKey(KeyCode.Space))
+        {
+            Rb.linearVelocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
+        }
+
         if (IsGrounded())
         {
             CoyoteTimeCounter = coyoteTime;
@@ -127,8 +136,39 @@ public class PlayerController : MonoBehaviour
         if (!isDashing)
         {
             lastHorizontalInput = horizontalMovement;
-            Rb.linearVelocity = new Vector2(horizontalMovement * movementSpeed, Mathf.Max(Rb.linearVelocity.y, maxFallSpeed)); // Apply clamped fall speed
-            Debug.Log("Current Fall Speed: " + Rb.linearVelocity.y);
+
+            float targetSpeed = horizontalMovement * movementSpeed;
+            float speedDifference = targetSpeed - Rb.linearVelocity.x;
+
+            float accelRate;
+
+            if (Mathf.Abs(horizontalMovement) > 0.1f)  
+            {
+                if (IsGrounded())  
+                {
+                    accelRate = acceleration;  
+                }
+                else
+                {
+                    accelRate = airAcceleration;  
+                }
+            }
+            else 
+            {
+                if (IsGrounded())  
+                {
+                    accelRate = deceleration;  
+                }
+                else  
+                {
+                    accelRate = airDeceleration;  
+                }
+            }
+
+            float movementForce = speedDifference * accelRate;
+            Rb.linearVelocity = new Vector2(Rb.linearVelocity.x + movementForce * Time.deltaTime, Mathf.Max(Rb.linearVelocity.y, maxFallSpeed));  // Apply clamped fall speed
+
+            Debug.Log(Rb.linearVelocity.x);
         }
     }
 
