@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float lowJumpMultiplier = 2f;
     [SerializeField] private float fallMultiplier = 2.5f;
     [SerializeField] private float coyoteTime = 0.2f;
+    [SerializeField] private GameObject doubleJumpEffectPrefab; 
+    [SerializeField] private Transform effectPosition;
     private float CoyoteTimeCounter;
     private float jumpBufferTime = 0.2f;
     private float jumpBufferCounter;
@@ -37,6 +39,7 @@ public class PlayerController : MonoBehaviour
     private bool isDashing = false;
     private float dashStartTime;
     public TextMeshProUGUI dashText;
+    private float defaultMovementSpeed;
 
     private float lastHorizontalInput = 0;
     private bool isFacingRight = true;
@@ -49,6 +52,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        defaultMovementSpeed = movementSpeed;
         currentDashCharges = maxDashCharges;
         if (dashText != null)
         {
@@ -99,6 +103,7 @@ public class PlayerController : MonoBehaviour
             }
             else if (canDoubleJump && doubleJumpsLeft > 0)
             {
+                TriggerDoubleJumpEffect();
                 Rb.linearVelocity = new Vector2(Rb.linearVelocity.x, doubleJumpForce);
                 doubleJumpsLeft--;
             }
@@ -179,8 +184,10 @@ public class PlayerController : MonoBehaviour
             isDashing = true;
             currentDashCharges--;
 
+            movementSpeed = 0f;
+            canDoubleJump = false;
             Rb.gravityScale = 0f;
-            Rb.linearVelocity = new Vector2(Rb.linearVelocity.x, 0);
+            Rb.linearVelocity = Vector2.zero;
 
             Vector2 dashDirection = new Vector2(Rb.linearVelocity.x, 0).normalized;
 
@@ -196,6 +203,8 @@ public class PlayerController : MonoBehaviour
 
     private void EndDash()
     {
+        canDoubleJump = true;
+        movementSpeed = defaultMovementSpeed;
         Rb.gravityScale = 1f;
         isDashing = false;
     }
@@ -226,5 +235,20 @@ public class PlayerController : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.DrawRay(this.transform.position, Vector3.down * (collider.bounds.extents.y + 0.1f));
+    }
+    private void TriggerDoubleJumpEffect()
+    {
+        GameObject effect = Instantiate(doubleJumpEffectPrefab, effectPosition.position, Quaternion.identity);
+
+        effect.transform.SetParent(this.transform);
+
+        Destroy(effect, 0.21f); 
+    }
+    private void OnDisable()
+    {
+        if (Rb != null)
+        {
+            Rb.linearVelocity = Vector2.zero;
+        }
     }
 }
