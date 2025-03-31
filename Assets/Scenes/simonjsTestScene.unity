@@ -269,17 +269,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83189876d4d389f43b7dd2e925aa112e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentIDCounter: 8
-  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":93,"yPos":159},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"It''s
-    Broken","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":474,"yPos":166},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"Fuck
-    you","parentUIDs":[0],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":2},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":true,"xPos":301,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Enclave
+  CurrentIDCounter: 15
+  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":-79.9999847,"yPos":158.999985},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"It''s
+    Broken","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":301.000031,"yPos":166.000015},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"Fuck
+    you","parentUIDs":[0],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":2},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":true,"xPos":128,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Enclave
     here, why isn''t your video feed working?","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Enclave
-    Soldier","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0.5},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":87,"yPos":274},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"Who
+    Soldier","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0.5},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":-77.33333,"yPos":270.000031},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"Who
     the hell is this?","parentUIDs":[2],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Enclave
-    Soldier","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0.5},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":471,"yPos":271},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"Who
-    the fu - who is - what - I should kick your fucking ass, who is this?","parentUIDs":[4],"AdvanceDialogueAutomatically":true,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Enclave
-    Solider","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0.1,"Volume":0.5},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":475,"yPos":420},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":null,"parentUIDs":[5],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Enclave
-    Soldier","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
+    Soldier","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0.5},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":297.999969,"yPos":271.000031},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"Who
+    the fu - who is - what - I should kick your fucking ass, who is this?","parentUIDs":[4],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Enclave
+    Solider","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0.1,"Volume":0.5}]}'
   saveVersion: 110
   DefaultName: 
   DefaultSprite: {fileID: 0}
@@ -303,13 +302,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 444553619}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.926967, y: 1.772466, z: -0.08443954}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -13.726967, y: 1.272466, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 822335044}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 857642515}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &484515403
 GameObject:
@@ -945,10 +944,12 @@ Transform:
   m_GameObject: {fileID: 857642513}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.81, y: 0.3, z: -0.08443954}
+  m_LocalPosition: {x: -15.37, y: 0.43, z: -0.08443954}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 444553621}
+  - {fileID: 1914606238}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &857642516
@@ -964,7 +965,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myConversation: {fileID: 444553620}
-  conversationDistance: 15
+  conversationDistance: 3
+  SpeechIndicaton: {fileID: 1242174480611404870, guid: 61550938552b4664ca8124cd83c13289, type: 3}
+  SpeechPosition: {fileID: 1914606238}
 --- !u!61 &857642517
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2152,7 +2155,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDamping: 0
+  m_LinearDamping: 3
   m_AngularDamping: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 6200000, guid: 612aa1921bcd7c441957bb0df9504a83, type: 2}
@@ -2237,6 +2240,37 @@ Transform:
   - {fileID: 1418424673}
   - {fileID: 1072352594}
   m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1914606237
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1914606238}
+  m_Layer: 0
+  m_Name: SpeechIndicatorPostion
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1914606238
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914606237}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 857642515}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2139858557
 GameObject:
@@ -2333,4 +2367,3 @@ SceneRoots:
   - {fileID: 2139858560}
   - {fileID: 1853813355}
   - {fileID: 857642515}
-  - {fileID: 444553621}

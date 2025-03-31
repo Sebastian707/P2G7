@@ -244,11 +244,12 @@ public class PlayerController : MonoBehaviour
 
         Destroy(effect, 0.21f); 
     }
-    private void OnDisable()
-    {
-        if (Rb != null)
-        {
-            Rb.linearVelocity = Vector2.zero;
-        }
-    }
+
+    //private void OnDisable()
+    //{
+    //    if (Rb != null)
+    //    {
+    //        Rb.linearVelocity = Vector2.zero;
+    //    }
+    //}
 }

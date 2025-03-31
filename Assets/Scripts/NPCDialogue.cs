@@ -6,6 +6,9 @@ public class NPCDialogue : MonoBehaviour
 
     public NPCConversation myConversation;
     public float conversationDistance = 3f;
+    [SerializeField] private GameObject SpeechIndicaton;
+    [SerializeField] private Transform SpeechPosition;
+    private GameObject currentSpeechIndicator;
 
     private GameObject player;
     void Start()
@@ -15,12 +18,27 @@ public class NPCDialogue : MonoBehaviour
 
     private void Update()
     {
+        if (IsPlayerNearby())
+        {
+            if (currentSpeechIndicator == null) 
+            {
+                SpeechIndicator();
+            }
+        }
+        else
+        {
+            if (currentSpeechIndicator != null) 
+            {
+                Destroy(currentSpeechIndicator);
+                currentSpeechIndicator = null;
+            }
+        }
+
         if (Input.GetKeyDown(KeyCode.E) && IsPlayerNearby())
         {
             ConversationManager.Instance.StartConversation(myConversation);
             DisableMovementOfCurrentCharacter();
         }
-
     }
 
     private bool IsPlayerNearby()
@@ -31,6 +49,8 @@ public class NPCDialogue : MonoBehaviour
             return distance <= conversationDistance;
         }
         return false;
+
+
     }
     private void DisableMovementOfCurrentCharacter()
     {
@@ -39,6 +59,13 @@ public class NPCDialogue : MonoBehaviour
         {
             playerController.enabled = false; // Disable movement
         }
+    }
+
+    private void SpeechIndicator()
+    {
+        currentSpeechIndicator = Instantiate(SpeechIndicaton, SpeechPosition.position, Quaternion.identity);
+        currentSpeechIndicator.transform.SetParent(this.transform);
+
     }
 
 }
