@@ -43,11 +43,25 @@ public class PlayerController : MonoBehaviour
 
     private float lastHorizontalInput = 0;
     private bool isFacingRight = true;
+    private static PlayerController instance;
 
     private void OnValidate()
     {
         collider = GetComponent<Collider2D>();
         Rb = GetComponent<Rigidbody2D>();
+    }
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void Start()
