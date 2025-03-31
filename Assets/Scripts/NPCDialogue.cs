@@ -34,7 +34,7 @@ public class NPCDialogue : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.E) && IsPlayerNearby())
+        if (Input.GetKeyDown(KeyCode.E) && IsPlayerNearby() && !ConversationManager.Instance.IsConversationActive)
         {
             ConversationManager.Instance.StartConversation(myConversation);
             DisableMovementOfCurrentCharacter();
