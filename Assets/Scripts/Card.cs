@@ -4,7 +4,7 @@ using UnityEngine;
 public class Card : MonoBehaviour
 {
 
-    
+
     public string cardName;
     public string description;
     public int cost;
@@ -20,7 +20,7 @@ public class Card : MonoBehaviour
         nameText.text = cardName;
         DescriptionText.text = description;
         costText.text = $"{cost} energy";
-        
+
     }
     public void ButtonPress()
     {
@@ -28,11 +28,22 @@ public class Card : MonoBehaviour
     }
     public void UseCard()
     {
-        
+        Debug.LogWarning("old UseCard was called", this);
         foreach (CardEffect effect in Effects)
         {
             effect.Use();
         }
         Destroy(gameObject);
+    }
+    public void UseCard(ICardPlayer owner, ICardPlayer target)
+    {
+
+
+        foreach (CardEffect effect in Effects)
+        {
+            effect.Use(owner,target);
+        }
+        Destroy(gameObject);
+
     }
 }

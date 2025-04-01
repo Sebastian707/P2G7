@@ -34,10 +34,6 @@ PrefabInstance:
       propertyPath: 'Effects.Array.data[0]'
       value: 
       objectReference: {fileID: -5575013431972098727}
-    - target: {fileID: 3681536999527297674, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
-      propertyPath: 'Effects.Array.data[1]'
-      value: 
-      objectReference: {fileID: 6030703920520113702}
     - target: {fileID: 5912879948911597768, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
       propertyPath: m_Name
       value: Conquest Variant
@@ -131,7 +127,7 @@ PrefabInstance:
       addedObject: {fileID: -5575013431972098727}
     - targetCorrespondingSourceObject: {fileID: 5912879948911597768, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6030703920520113702}
+      addedObject: {fileID: 6791455053560161372}
   m_SourcePrefab: {fileID: 100100000, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
 --- !u!1 &5205821128619978887 stripped
 GameObject:
@@ -151,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugText: I want to thank you mark
---- !u!114 &6030703920520113702
+--- !u!114 &6791455053560161372
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -160,7 +156,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 5205821128619978887}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fd03a38d4e3dba468bb5e89ae5249ec, type: 3}
+  m_Script: {fileID: 11500000, guid: b25ed13a389ee4c44b024cb8a273c4af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 2
+  targetSelf: 0
+  healthChange: -2

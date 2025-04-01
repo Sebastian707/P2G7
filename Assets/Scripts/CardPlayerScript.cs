@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-public class CardPlayerScript : MonoBehaviour
+public class CardPlayerScript : MonoBehaviour, ICardPlayer
 {
     public int maxHealth = 10;
     private int health;
@@ -53,7 +53,7 @@ public class CardPlayerScript : MonoBehaviour
         GameObject drawnCard = cardPrefab;
         if (drawnCard == null) drawnCard = deck[Random.Range(0, deck.Length)];
         GameObject newCard = Instantiate(drawnCard, transform);
-        if (amount > 1) DrawCard(amount - 1,cardPrefab);
+        if (amount > 1) DrawCard(amount - 1, cardPrefab);
 
     }
     public void SpendCard(Card card)
@@ -61,6 +61,6 @@ public class CardPlayerScript : MonoBehaviour
         if (card.cost > energy) return;
         energy -= card.cost;
         energyText.text = $"{energy}/{maxEnergy} energy";
-        card.UseCard();
+        card.UseCard(this,CardGameMaster.instance.enemy);
     }
 }
