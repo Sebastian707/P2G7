@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float lowJumpMultiplier = 2f;
     [SerializeField] private float fallMultiplier = 2.5f;
     [SerializeField] private float coyoteTime = 0.2f;
-    [SerializeField] private GameObject doubleJumpEffectPrefab; 
+    [SerializeField] private GameObject doubleJumpEffectPrefab;
     [SerializeField] private Transform effectPosition;
     private float CoyoteTimeCounter;
     private float jumpBufferTime = 0.2f;
@@ -29,7 +30,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool canDoubleJump = false;
     private int doubleJumpsLeft = 0;
 
-    [Header("Dash settings")]
+    [Header("Dash Settings")]
     [SerializeField] private bool CanDash = false;
     [SerializeField] private float dashDistance = 5f;
     [SerializeField] private float dashDuration = 0.5f;
@@ -40,6 +41,16 @@ public class PlayerController : MonoBehaviour
     private float dashStartTime;
     public TextMeshProUGUI dashText;
     private float defaultMovementSpeed;
+
+    [Header("Respawn Settings")]
+    private Vector2 checkpointPosition;
+    public CanvasGroup fadeCanvasGroup;
+    public float fadeDuration = 1f;
+    private Transform _transform;
+    public Vector2 deathRecoil;
+    private Rigidbody2D _rigidbody;
+    public float deathDelay;
+    private bool isRespawning = false;
 
     private float lastHorizontalInput = 0;
     private bool isFacingRight = true;
@@ -68,6 +79,10 @@ public class PlayerController : MonoBehaviour
     {
         defaultMovementSpeed = movementSpeed;
         currentDashCharges = maxDashCharges;
+        checkpointPosition = transform.position;
+        _transform = gameObject.GetComponent<Transform>();
+        _rigidbody = gameObject.GetComponent<Rigidbody2D>();
+
         if (dashText != null)
         {
             dashText.text = "Dashes: " + currentDashCharges + " / " + maxDashCharges;
@@ -76,7 +91,6 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-
         if (Rb.linearVelocity.y < 0)
         {
             Rb.linearVelocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
@@ -107,6 +121,19 @@ public class PlayerController : MonoBehaviour
         if (horizontalMovement > 0 && !isFacingRight) Flip();
         else if (horizontalMovement < 0 && isFacingRight) Flip();
 
+        if (!isDashing)
+        {
+            lastHorizontalInput = horizontalMovement;
+
+            float targetSpeed = horizontalMovement * movementSpeed;
+            float speedDifference = targetSpeed - Rb.linearVelocity.x;
+
+            float accelRate = Mathf.Abs(horizontalMovement) > 0.1f ? (IsGrounded() ? acceleration : airAcceleration) : (IsGrounded() ? deceleration : airDeceleration);
+
+            float movementForce = speedDifference * accelRate;
+            Rb.linearVelocity = new Vector2(Rb.linearVelocity.x + movementForce * Time.deltaTime, Mathf.Max(Rb.linearVelocity.y, maxFallSpeed));
+        }
+
         if (jumpBufferCounter > 0f)
         {
             if (CoyoteTimeCounter > 0f)
@@ -134,60 +161,15 @@ public class PlayerController : MonoBehaviour
             Dash();
         }
 
-        if (!isDashing && currentDashCharges < maxDashCharges)
+        if (!isDashing && currentDashCharges < maxDashCharges && Time.time >= dashStartTime + chargeRestoreRate)
         {
-            if (Time.time >= dashStartTime + chargeRestoreRate)
-            {
-                currentDashCharges++;
-                dashStartTime = Time.time;
-            }
+            currentDashCharges++;
+            dashStartTime = Time.time;
         }
 
-        if (CanDash && dashText != null)
+        if (dashText != null)
         {
-            dashText.text = "Dashes: " + currentDashCharges + " / " + maxDashCharges;
-        }
-        else if (dashText != null)
-        {
-            dashText.text = "";
-        }
-
-        if (!isDashing)
-        {
-            lastHorizontalInput = horizontalMovement;
-
-            float targetSpeed = horizontalMovement * movementSpeed;
-            float speedDifference = targetSpeed - Rb.linearVelocity.x;
-
-            float accelRate;
-
-            if (Mathf.Abs(horizontalMovement) > 0.1f)  
-            {
-                if (IsGrounded())  
-                {
-                    accelRate = acceleration;  
-                }
-                else
-                {
-                    accelRate = airAcceleration;  
-                }
-            }
-            else 
-            {
-                if (IsGrounded())  
-                {
-                    accelRate = deceleration;  
-                }
-                else  
-                {
-                    accelRate = airDeceleration;  
-                }
-            }
-
-            float movementForce = speedDifference * accelRate;
-            Rb.linearVelocity = new Vector2(Rb.linearVelocity.x + movementForce * Time.deltaTime, Mathf.Max(Rb.linearVelocity.y, maxFallSpeed));  // Apply clamped fall speed
-
-            Debug.Log(Rb.linearVelocity.x);
+            dashText.text = CanDash ? "Dashes: " + currentDashCharges + " / " + maxDashCharges : "";
         }
     }
 
@@ -230,40 +212,51 @@ public class PlayerController : MonoBehaviour
 
     public bool IsGrounded()
     {
-        RaycastHit2D hit;
-        LayerMask mask = LayerMask.GetMask("Ground");
-        hit = Physics2D.Raycast(this.transform.position, Vector2.down, collider.bounds.extents.y + 0.1f, mask);
-        return hit.collider != null;
+        return Physics2D.Raycast(transform.position, Vector2.down, collider.bounds.extents.y + 0.1f, LayerMask.GetMask("Ground")).collider != null;
     }
 
-    public void EnableDoubleJump(bool enable)
+    public void EnableDoubleJump(bool enable) => canDoubleJump = enable;
+    public void EnableDash(bool enable) => CanDash = enable;
+    public void SetCheckpoint(Vector2 newCheckpoint) => checkpointPosition = newCheckpoint;
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        canDoubleJump = enable;
+        if (other.CompareTag("Hazard") && !isRespawning)
+        {
+            isRespawning = true;
+            movementSpeed = 0f;
+            _rigidbody.AddForce(new Vector2(-_transform.localScale.x * deathRecoil.x, deathRecoil.y), ForceMode2D.Impulse);
+            StartCoroutine(Respawn());
+        }
     }
 
-    public void EnableDash(bool enable)
+    private IEnumerator Respawn()
     {
-        CanDash = enable;
+        movementSpeed = defaultMovementSpeed;
+        yield return StartCoroutine(Fade(1));
+        transform.position = checkpointPosition;
+        yield return StartCoroutine(Fade(0));
+        isRespawning = false;
     }
 
-    private void OnDrawGizmos()
+    private IEnumerator Fade(float targetAlpha)
     {
-        Gizmos.DrawRay(this.transform.position, Vector3.down * (collider.bounds.extents.y + 0.1f));
+        float startAlpha = fadeCanvasGroup.alpha, elapsedTime = 0;
+        while (elapsedTime < fadeDuration)
+        {
+            elapsedTime += Time.deltaTime;
+            fadeCanvasGroup.alpha = Mathf.Lerp(startAlpha, targetAlpha, elapsedTime / fadeDuration);
+            yield return null;
+        }
+        fadeCanvasGroup.alpha = targetAlpha;
     }
+
     private void TriggerDoubleJumpEffect()
     {
         GameObject effect = Instantiate(doubleJumpEffectPrefab, effectPosition.position, Quaternion.identity);
 
-        effect.transform.SetParent(this.transform);
+        effect.transform.SetParent(transform);
 
-        Destroy(effect, 0.21f); 
+        Destroy(effect, 0.21f);
     }
-
-    //private void OnDisable()
-    //{
-    //    if (Rb != null)
-    //    {
-    //        Rb.linearVelocity = Vector2.zero;
-    //    }
-    //}
 }

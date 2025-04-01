@@ -6,11 +6,17 @@ public class PlayerRespawn : MonoBehaviour
     private Vector2 checkpointPosition;
     public CanvasGroup fadeCanvasGroup;
     public float fadeDuration = 1f;
+    private Transform _transform;
+    public Vector2 deathRecoil;
+    private Rigidbody2D _rigidbody;
+    public float deathDelay;
 
     private void Start()
     {
         // Default checkpoint to starting position
         checkpointPosition = transform.position;
+        _transform = gameObject.GetComponent<Transform>();
+        _rigidbody = gameObject.GetComponent<Rigidbody2D>();
     }
 
     public void SetCheckpoint(Vector2 newCheckpoint)
@@ -30,6 +36,10 @@ public class PlayerRespawn : MonoBehaviour
     {
         if (other.CompareTag("Hazard")) // Ensure hazards like spikes have the tag "Hazard"
         {
+            Vector2 newForce;
+            newForce.x = -_transform.localScale.x * deathRecoil.x;
+            newForce.y = deathRecoil.y;
+            _rigidbody.AddForce(newForce, ForceMode2D.Impulse);
             StartCoroutine(Respawn());
         }
     }

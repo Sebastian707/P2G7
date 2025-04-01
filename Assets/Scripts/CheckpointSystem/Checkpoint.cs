@@ -4,9 +4,10 @@ public class Checkpoint : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player")) // Ensure player has the tag "Player"
+        if (other.CompareTag("Player"))
         {
-            other.GetComponent<PlayerRespawn>().SetCheckpoint(transform.position);
+            other.GetComponent<PlayerController>().SetCheckpoint(transform.position);
+            Destroy(gameObject);
         }
     }
 }
