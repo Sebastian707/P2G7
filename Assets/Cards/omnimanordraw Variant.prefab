@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &7412410354709178102
+--- !u!1001 &5151338206863921359
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -9,39 +9,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3681536999527297674, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
-      propertyPath: speech
-      value: The FitnessGram Pacer test is a multistage aerobic capacity test that
-        progressively gets more difficult as it continues. The 20 meter Pacer test
-        will begin in 30 seconds. Line up at the start. The running speed starts
-        slowly, but gets faster each minute after you hear this signal *boop*. A
-        single lap should be completed each time you hear this sound *ding*. Remember
-        to run in a straight line, and run as long as possible. The second time you
-        fail to complete a lap before the sound, your test is over. The test will
-        begin on the word start. On your mark, get ready, start.
-      objectReference: {fileID: 0}
-    - target: {fileID: 3681536999527297674, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
       propertyPath: cardName
-      value: The FitnessGram Pacer test
+      value: is it omniman or will you draw a card?
       objectReference: {fileID: 0}
     - target: {fileID: 3681536999527297674, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
       propertyPath: description
-      value: lets you draw 2 draw 2 cards
+      value: either functions like omniman or makes you draw 2 cards
       objectReference: {fileID: 0}
-    - target: {fileID: 3681536999527297674, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
-      propertyPath: Effects.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3681536999527297674, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
-      propertyPath: 'Effects.Array.data[0]'
-      value: 
-      objectReference: {fileID: 8731450412116007194}
-    - target: {fileID: 3681536999527297674, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
-      propertyPath: 'Effects.Array.data[1]'
-      value: 
-      objectReference: {fileID: -328627170570777085}
     - target: {fileID: 5912879948911597768, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
       propertyPath: m_Name
-      value: fitnessgram Variant
+      value: omnimanordraw Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8963663435694078884, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
       propertyPath: m_Pivot.x
@@ -69,11 +46,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8963663435694078884, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 8963663435694078884, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 8963663435694078884, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -129,50 +106,25 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5912879948911597768, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8731450412116007194}
-    - targetCorrespondingSourceObject: {fileID: 5912879948911597768, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: -328627170570777085}
+      addedObject: {fileID: 6854447496432902065}
   m_SourcePrefab: {fileID: 100100000, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
---- !u!1 &3805804527256993342 stripped
+--- !u!1 &1545858588765997063 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5912879948911597768, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
-  m_PrefabInstance: {fileID: 7412410354709178102}
+  m_PrefabInstance: {fileID: 5151338206863921359}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8731450412116007194
+--- !u!114 &6854447496432902065
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3805804527256993342}
+  m_GameObject: {fileID: 1545858588765997063}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 416e595b51276a44fbd6eee5d42d63c8, type: 3}
+  m_Script: {fileID: 11500000, guid: cd6b3e5529b8db2428db9d8ccda3a844, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugText: The FitnessGram Pacer test is a multistage aerobic capacity test that
-    progressively gets more difficult as it continues. The 20 meter Pacer test will
-    begin in 30 seconds. Line up at the start. The running speed starts slowly, but
-    gets faster each minute after you hear this signal *boop*. A single lap should
-    be completed each time you hear this sound *ding*. Remember to run in a straight
-    line, and run as long as possible. The second time you fail to complete a lap
-    before the sound, your test is over. The test will begin on the word start. On
-    your mark, get ready, start.
---- !u!114 &-328627170570777085
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3805804527256993342}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fb5e70c0ad054b4bb7651aeae74f8fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  amount: 2
-  drawnCard: {fileID: 2702823175694003557, guid: d50c928bd07501548b6974e97ada3f8c, type: 3}
   cards:
-  - {fileID: 2702823175694003557, guid: d50c928bd07501548b6974e97ada3f8c, type: 3}
+  - {fileID: 9117610389690281227, guid: 3d073c3ea46235a49b91bbe31d228371, type: 3}
   - {fileID: 2702823175694003557, guid: d50c928bd07501548b6974e97ada3f8c, type: 3}

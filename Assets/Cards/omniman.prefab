@@ -25,10 +25,6 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3681536999527297674, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
-      propertyPath: 'Effects.Array.data[0]'
-      value: 
-      objectReference: {fileID: 3801508161949054618}
-    - target: {fileID: 3681536999527297674, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
       propertyPath: 'Effects.Array.data[1]'
       value: 
       objectReference: {fileID: -1645084116764012339}
@@ -125,7 +121,7 @@ PrefabInstance:
       addedObject: {fileID: -1645084116764012339}
     - targetCorrespondingSourceObject: {fileID: 5912879948911597768, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3801508161949054618}
+      addedObject: {fileID: 8803176591401300232}
   m_SourcePrefab: {fileID: 100100000, guid: dd9961234a52bf34fb4000f0ca29eec8, type: 3}
 --- !u!1 &9117610389690281227 stripped
 GameObject:
@@ -148,7 +144,7 @@ MonoBehaviour:
     AROUND YOU DIE! THINK, MARK! YOULL OUTLAST EVERY FRAGILE INSIGNIFICANT BEING
     ON THIS PLANET! YOU'LL LIVE TO SEE THIS PLANET CRUMBLE TO DUST AND BLOW AWAY!
     EVERYONE AND EVERYTHING YOU KNOW WILL BE GONE. WHAT WILL YOU HAVE AFTER 500 YEARS?!
---- !u!114 &3801508161949054618
+--- !u!114 &8803176591401300232
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -157,7 +153,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 9117610389690281227}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fd03a38d4e3dba468bb5e89ae5249ec, type: 3}
+  m_Script: {fileID: 11500000, guid: b25ed13a389ee4c44b024cb8a273c4af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 1
+  targetSelf: 0
+  healthChange: -1
