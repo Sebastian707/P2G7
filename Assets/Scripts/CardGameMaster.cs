@@ -39,8 +39,8 @@ public class CardGameMaster : MonoBehaviour
     public void Endturn()
     {
         //CardPlayerScript.instance.Health -= enemyDamage;
-        enemy.TakeTurn();
         enemy.DrawCard();
+        enemy.TakeTurn();
         CardPlayerScript.instance.Energy = CardPlayerScript.instance.maxEnergy;
         CardPlayerScript.instance.DrawCard();
     }

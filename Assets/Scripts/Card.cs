@@ -14,7 +14,7 @@ public class Card : MonoBehaviour
     [SerializeField] private TextMeshProUGUI DescriptionText;
     [SerializeField] private TextMeshProUGUI costText;
 
-    private void Start()
+    private void Awake()
     {
         Effects = GetComponents<CardEffect>();
         nameText.text = cardName;
