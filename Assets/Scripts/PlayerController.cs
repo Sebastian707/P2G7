@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour
     public CanvasGroup fadeCanvasGroup;
     public float fadeDuration = 1f;
     private Transform _transform;
-    public Vector2 deathRecoil;
+    [SerializeField] private Vector2 deathRecoil;
     private Rigidbody2D _rigidbody;
     public float deathDelay;
     private bool isRespawning = false;
