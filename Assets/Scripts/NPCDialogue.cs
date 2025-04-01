@@ -1,5 +1,6 @@
 using UnityEngine;
 using DialogueEditor;
+using Unity.VisualScripting;
 
 public class NPCDialogue : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class NPCDialogue : MonoBehaviour
 
     private void Update()
     {
-        if (IsPlayerNearby())
+        if (IsPlayerNearby() && !ConversationManager.Instance.IsConversationActive)
         {
             if (currentSpeechIndicator == null) 
             {
@@ -38,7 +39,9 @@ public class NPCDialogue : MonoBehaviour
         {
             ConversationManager.Instance.StartConversation(myConversation);
             DisableMovementOfCurrentCharacter();
+            Destroy(currentSpeechIndicator);
         }
+    
     }
 
     private bool IsPlayerNearby()
