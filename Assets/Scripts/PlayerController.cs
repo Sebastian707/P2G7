@@ -51,10 +51,15 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D _rigidbody;
     public float deathDelay;
     private bool isRespawning = false;
+    public float fadeLinger = 5f;
 
     private float lastHorizontalInput = 0;
-    private bool isFacingRight = true;
+    public bool isFacingRight = true;
     private static PlayerController instance;
+
+    [Header("Camera")]
+    private CameraFollowObject cameraFollowObject;
+    [SerializeField] private GameObject cameraFollowGO;
 
     private void OnValidate()
     {
@@ -87,8 +92,12 @@ public class PlayerController : MonoBehaviour
         {
             dashText.text = "Dashes: " + currentDashCharges + " / " + maxDashCharges;
         }
+
+        cameraFollowObject = cameraFollowGO.GetComponent<CameraFollowObject>();
+
     }
 
+    [System.Obsolete]
     private void Update()
     {
         if (Rb.linearVelocity.y < 0)
@@ -171,6 +180,7 @@ public class PlayerController : MonoBehaviour
         {
             dashText.text = CanDash ? "Dashes: " + currentDashCharges + " / " + maxDashCharges : "";
         }
+
     }
 
     private void Dash()
@@ -207,8 +217,24 @@ public class PlayerController : MonoBehaviour
 
     private void Flip()
     {
-        isFacingRight = !isFacingRight;
+        if (isFacingRight)
+        {
+            Vector2 rotator = new Vector2(transform.rotation.x, 180f);
+            transform.rotation = Quaternion.Euler(rotator);
+            isFacingRight = !isFacingRight;
+
+            cameraFollowObject.CallTurn();
+        }
+        else
+        {
+            Vector2 rotator = new Vector2(transform.rotation.x, 0f);
+            transform.rotation = Quaternion.Euler(rotator);
+            isFacingRight = !isFacingRight;
+            cameraFollowObject.CallTurn();
+        }
+       
     }
+  
 
     public bool IsGrounded()
     {
@@ -235,6 +261,7 @@ public class PlayerController : MonoBehaviour
         movementSpeed = defaultMovementSpeed;
         yield return StartCoroutine(Fade(1));
         transform.position = checkpointPosition;
+        yield return new WaitForSeconds(fadeLinger);
         yield return StartCoroutine(Fade(0));
         isRespawning = false;
     }

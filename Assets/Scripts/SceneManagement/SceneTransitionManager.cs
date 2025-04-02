@@ -10,6 +10,7 @@ public class SceneTransitionManager : MonoBehaviour
     public float fadeDuration = 1f;
 
     private string lastExitName;
+    [SerializeField] private float fadeLinger = 1f;
 
     private void Awake()
     {
@@ -52,6 +53,7 @@ public class SceneTransitionManager : MonoBehaviour
                 player.transform.rotation = spawnPoint.transform.rotation;
             }
         }
+        yield return new WaitForSeconds(fadeLinger);
 
         yield return StartCoroutine(Fade(0));
     }

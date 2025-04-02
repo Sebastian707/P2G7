@@ -10,6 +10,7 @@ public class PlayerRespawn : MonoBehaviour
     public Vector2 deathRecoil;
     private Rigidbody2D _rigidbody;
     public float deathDelay;
+    public float fadeLinger = 5f;
 
     private void Start()
     {
@@ -29,6 +30,7 @@ public class PlayerRespawn : MonoBehaviour
     {
         yield return StartCoroutine(Fade(1));
         transform.position = checkpointPosition;
+        yield return new WaitForSeconds(fadeLinger);
         yield return StartCoroutine(Fade(0));
     }
 
