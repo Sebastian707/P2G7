@@ -125,8 +125,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e00a9279cd79d2343a011bb693173a30
-      internalID: 1765920884
+      spriteID: 5622df216e45a254f95541fb96ffa1f7
+      internalID: -1742439715
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b5c58257bf516e844818482c59731887
-      internalID: 1777906501
+      spriteID: ca2d936f8a1fb5747b63e973868b9ca2
+      internalID: -198341633
       vertices: []
       indices: 
       edges: []
@@ -169,8 +169,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 345af67018a07214589a90e7a280b185
-      internalID: 1030663685
+      spriteID: 62716f28ca54a09479653ce9f1585eae
+      internalID: -1305327370
       vertices: []
       indices: 
       edges: []
@@ -191,8 +191,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a1c9816586ebf44a86ed544060a4d3a
-      internalID: -1740950426
+      spriteID: 4fd0329d9d9b702459c565009a9e2ef7
+      internalID: 1194025397
       vertices: []
       indices: 
       edges: []
@@ -201,7 +201,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: f8c4ce9547d0d9c43b012c6ad991e572
+    spriteID: 8f779347ff4e3594eaacb2a33503d45a
     internalID: 0
     vertices: []
     indices: 
@@ -211,18 +211,18 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Spritesheet Idle Color_0: 1670421936
-      Spritesheet Idle Color_1: -1171675137
-      Spritesheet Idle Color_10: 1030663685
-      Spritesheet Idle Color_11: -1740950426
-      Spritesheet Idle Color_2: 1235546145
-      Spritesheet Idle Color_3: 1168248429
-      Spritesheet Idle Color_4: 2009627135
-      Spritesheet Idle Color_5: 722379676
-      Spritesheet Idle Color_6: 300791565
-      Spritesheet Idle Color_7: -357090988
-      Spritesheet Idle Color_8: 1765920884
-      Spritesheet Idle Color_9: 1777906501
+      Spritesheet Idle Color_0: -1338741437
+      Spritesheet Idle Color_1: -1881542770
+      Spritesheet Idle Color_10: -1305327370
+      Spritesheet Idle Color_11: 1194025397
+      Spritesheet Idle Color_2: -2107067222
+      Spritesheet Idle Color_3: -1637899352
+      Spritesheet Idle Color_4: -1934290670
+      Spritesheet Idle Color_5: 1449107268
+      Spritesheet Idle Color_6: 1902373095
+      Spritesheet Idle Color_7: -965295126
+      Spritesheet Idle Color_8: -1742439715
+      Spritesheet Idle Color_9: -198341633
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
