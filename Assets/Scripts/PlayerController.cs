@@ -4,6 +4,15 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
+
+    [Header("Audio Settings")]
+    [SerializeField] private AudioClip jumpSound;
+    [SerializeField] private AudioClip doubleJumpSound;
+    [SerializeField] private AudioClip dashSound;
+    [SerializeField] private AudioClip respawnSound;
+    private AudioSource audioSource; // Reference to AudioSource
+
+
     [Header("Movement Settings")]
     [SerializeField] private float movementSpeed = 5;
     [SerializeField] private float acceleration = 10f;
@@ -43,11 +52,11 @@ public class PlayerController : MonoBehaviour
     private float defaultMovementSpeed;
 
     [Header("Respawn Settings")]
+    [SerializeField] private Vector2 deathRecoil;
     private Vector2 checkpointPosition;
     public CanvasGroup fadeCanvasGroup;
     public float fadeDuration = 1f;
     private Transform _transform;
-    [SerializeField] private Vector2 deathRecoil;
     private Rigidbody2D _rigidbody;
     public float deathDelay;
     private bool isRespawning = false;
@@ -58,8 +67,8 @@ public class PlayerController : MonoBehaviour
     private static PlayerController instance;
 
     [Header("Camera")]
-    private CameraFollowObject cameraFollowObject;
     [SerializeField] private GameObject cameraFollowGO;
+    private CameraFollowObject cameraFollowObject;
 
     private void OnValidate()
     {
@@ -85,6 +94,7 @@ public class PlayerController : MonoBehaviour
         defaultMovementSpeed = movementSpeed;
         currentDashCharges = maxDashCharges;
         checkpointPosition = transform.position;
+        audioSource = gameObject.GetComponent<AudioSource>();
         _transform = gameObject.GetComponent<Transform>();
         _rigidbody = gameObject.GetComponent<Rigidbody2D>();
 
@@ -150,12 +160,14 @@ public class PlayerController : MonoBehaviour
                 Rb.linearVelocity = new Vector2(Rb.linearVelocity.x, jumpForce);
                 doubleJumpsLeft = maxDoubleJumps;
                 jumpBufferCounter = 0f;
+                PlaySound(jumpSound);
             }
             else if (canDoubleJump && doubleJumpsLeft > 0)
             {
                 TriggerDoubleJumpEffect();
                 Rb.linearVelocity = new Vector2(Rb.linearVelocity.x, doubleJumpForce);
                 doubleJumpsLeft--;
+                PlaySound(doubleJumpSound);
             }
         }
 
@@ -187,14 +199,16 @@ public class PlayerController : MonoBehaviour
     {
         if (CanDash && currentDashCharges > 0)
         {
+ 
             isDashing = true;
             currentDashCharges--;
+
 
             movementSpeed = 0f;
             canDoubleJump = false;
             Rb.gravityScale = 0f;
             Rb.linearVelocity = Vector2.zero;
-
+            PlaySound(dashSound);
             Vector2 dashDirection = new Vector2(Rb.linearVelocity.x, 0).normalized;
 
             if (dashDirection.x == 0)
@@ -285,5 +299,13 @@ public class PlayerController : MonoBehaviour
         effect.transform.SetParent(transform);
 
         Destroy(effect, 0.21f);
+    }
+
+    private void PlaySound(AudioClip clip)
+    {
+        if (clip != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(clip);
+        }
     }
 }
