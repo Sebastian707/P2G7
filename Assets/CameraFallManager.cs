@@ -1,7 +1,7 @@
 using UnityEngine;
 using Unity.Cinemachine;
 
-public class CameraDampingController : MonoBehaviour
+public class CamereFallManager : MonoBehaviour
 {
     [Header("References")]
     public CinemachineCamera cinemachineCamera; 
