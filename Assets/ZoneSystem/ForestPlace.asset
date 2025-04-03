@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51e2c6f8dd018be4e8e350ff7a62f3d3, type: 3}
   m_Name: ForestPlace
   m_EditorClassIdentifier: 
-  zoneName: Greenpath
+  zoneName: ForestPlace
   sceneNames:
   - UlrichTestScene

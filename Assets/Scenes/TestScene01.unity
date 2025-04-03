@@ -303,7 +303,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Event:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 105725181}
+        m_TargetAssemblyTypeName: QuestManager, Assembly-CSharp
+        m_MethodName: StartQuest
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 20b70863baa28374ca1f27827873c601, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Quest, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   NodeID: 5
   TMPFont: {fileID: 0}
   Icon: {fileID: 21300000, guid: 93973b1b7f146024da28909a55909f42, type: 3}
@@ -399,6 +411,59 @@ MonoBehaviour:
   TMPFont: {fileID: 0}
   Icon: {fileID: 21300000, guid: 93973b1b7f146024da28909a55909f42, type: 3}
   Audio: {fileID: 8300000, guid: 1983cd282fe73b64fae6771a18b322ed, type: 3}
+--- !u!1 &105725180
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 105725182}
+  - component: {fileID: 105725181}
+  m_Layer: 0
+  m_Name: QuestManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &105725181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 105725180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbb39e92e8b4c1f48a54dc4d9329fdfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onStartQuest:
+    m_PersistentCalls:
+      m_Calls: []
+  onUpdateObjectiveProgress:
+    m_PersistentCalls:
+      m_Calls: []
+  onQuestComplete:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!4 &105725182
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 105725180}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 417.70245, y: 268.70306, z: -61.187347}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &224018039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1751,13 +1816,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 17
-  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":103.000015,"yPos":157.999985},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"It''s
-    Broken","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":484.000031,"yPos":165.000015},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"Fuck
-    you","parentUIDs":[0],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":2},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":true,"xPos":311,"yPos":21},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Enclave
+  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":-5.49998474,"yPos":158.999985},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"It''s
+    Broken","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":375.500031,"yPos":166.000015},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"Fuck
+    you","parentUIDs":[0],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":2},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":true,"xPos":202.5,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Enclave
     here, why isn''t your video feed working?","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Enclave
-    Soldier","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0.5},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":105.666672,"yPos":269.000031},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"Who
+    Soldier","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0.5},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":-2.83332825,"yPos":270.000031},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"Who
     the hell is this?","parentUIDs":[2],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Enclave
-    Soldier","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0.5},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":480.999969,"yPos":270.000031},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"Who
+    Soldier","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0.5},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":372.499969,"yPos":271.000031},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"Who
     the fu - who is - what - I should kick your fucking ass, who is this?","parentUIDs":[4],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Enclave
     Soldier","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0.1,"Volume":0.5}]}'
   saveVersion: 110
@@ -1774,7 +1839,19 @@ MonoBehaviour:
   EndConversationFont: {fileID: 0}
   Event:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 105725181}
+        m_TargetAssemblyTypeName: QuestManager, Assembly-CSharp
+        m_MethodName: StartQuest
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 20b70863baa28374ca1f27827873c601, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Quest, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &1538602043
 Transform:
   m_ObjectHideFlags: 0
@@ -2223,3 +2300,4 @@ SceneRoots:
   - {fileID: 1211377045}
   - {fileID: 1148470818}
   - {fileID: 1470462081}
+  - {fileID: 105725182}
