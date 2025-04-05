@@ -7,14 +7,13 @@ public class DialogueEventTrigger : MonoBehaviour
     public NPCDialogue npcDialogue;
     public NPCConversation[] possibleConversations;
 
-    private void Start() // Moved from Awake() to Start()
+    private void Start()
     {
         if (string.IsNullOrEmpty(characterID))
         {
-            characterID = gameObject.name; // fallback to name if ID isn't manually assigned
+            characterID = gameObject.name;
         }
 
-        // Try to restore conversation state
         if (DialogueManager.Instance != null)
         {
             if (DialogueManager.Instance.TryGetSavedConversation(characterID, out var savedConversation))

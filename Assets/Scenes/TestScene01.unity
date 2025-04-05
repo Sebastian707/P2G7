@@ -1728,7 +1728,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 17
-  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":273.5,"yPos":137},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"I
+  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":207,"yPos":120},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"I
     just work here dude","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Enclave
     Soldier","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0.5}]}'
   saveVersion: 110
@@ -2392,7 +2392,7 @@ MonoBehaviour:
   NodeID: 0
   TMPFont: {fileID: 0}
   Icon: {fileID: 21300000, guid: 93973b1b7f146024da28909a55909f42, type: 3}
-  Audio: {fileID: 8300000, guid: 1983cd282fe73b64fae6771a18b322ed, type: 3}
+  Audio: {fileID: 0}
 --- !u!4 &2130890026
 Transform:
   m_ObjectHideFlags: 0
