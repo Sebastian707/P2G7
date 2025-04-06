@@ -27,6 +27,8 @@ public class DialogueManager : MonoBehaviour
 
     public bool TryGetSavedConversation(string characterID, out NPCConversation conversation)
     {
-        return dialogueStates.TryGetValue(characterID, out conversation);
+        bool found = dialogueStates.TryGetValue(characterID, out conversation);
+
+        return found && conversation != null;
     }
 }

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using DialogueEditor;
 
@@ -7,8 +8,10 @@ public class DialogueEventTrigger : MonoBehaviour
     public NPCDialogue npcDialogue;
     public NPCConversation[] possibleConversations;
 
-    private void Start()
+    private IEnumerator Start()
     {
+        yield return null;
+
         if (string.IsNullOrEmpty(characterID))
         {
             characterID = gameObject.name;
@@ -25,10 +28,6 @@ public class DialogueEventTrigger : MonoBehaviour
                 DialogueManager.Instance.RegisterDialogueState(characterID, npcDialogue.myConversation);
             }
         }
-        else
-        {
-            Debug.LogWarning("DialogueManager.Instance is not initialized yet.");
-        }
     }
 
     public void ChangeConversation(int conversationIndex)
@@ -38,7 +37,7 @@ public class DialogueEventTrigger : MonoBehaviour
             var selected = possibleConversations[conversationIndex];
             npcDialogue.myConversation = selected;
             DialogueManager.Instance.RegisterDialogueState(characterID, selected);
-            Debug.Log($"{characterID} switched to conversation: {selected.name}");
+            Debug.Log($"[DialogueEventTrigger] {characterID} switched to conversation: {selected.name}");
         }
     }
 }
