@@ -2042,6 +2042,7 @@ MonoBehaviour:
   fallingYDamping: 0.25
   fallThreshold: -2
   dampingTransitionSpeed: 3
+  CameraTargetOffset: 2
 --- !u!4 &1095459314
 Transform:
   m_ObjectHideFlags: 0
@@ -3518,7 +3519,7 @@ Transform:
   m_GameObject: {fileID: 1418424669}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -151.49072, y: 9.9, z: -1001.4263}
+  m_LocalPosition: {x: -148.96935, y: 9.9, z: -1001.4263}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5723,6 +5724,10 @@ PrefabInstance:
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 1984751133}
+    - target: {fileID: 6505310084830297113, guid: b3cd280965235f54fac8b42059e09b77, type: 3}
+      propertyPath: virtualCamera
+      value: 
+      objectReference: {fileID: 1917745055}
     - target: {fileID: 6505310084830297113, guid: b3cd280965235f54fac8b42059e09b77, type: 3}
       propertyPath: cameraFollowGO
       value: 

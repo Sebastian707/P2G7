@@ -11,7 +11,8 @@ public class CamereFallManager : MonoBehaviour
     public float defaultYDamping = 1.0f;  
     public float fallingYDamping = 0.25f;
     public float fallThreshold = -2f; 
-    public float dampingTransitionSpeed = 3f; 
+    public float dampingTransitionSpeed = 3f;
+    public float CameraTargetOffset = 2f;
 
     private CinemachinePositionComposer positionComposer;
     private float currentDamping; 
@@ -40,6 +41,29 @@ public class CamereFallManager : MonoBehaviour
         currentDamping = Mathf.Lerp(currentDamping, targetDamping, Time.deltaTime * dampingTransitionSpeed);
 
         positionComposer.Damping.y = currentDamping;
+
+        if (Mathf.Abs(playerRb.linearVelocity.x) < 0.001f)
+        {
+            if (Input.GetKey(KeyCode.W) && playerRb.linearVelocity.y == 0f)
+            {
+                positionComposer.TargetOffset.y = CameraTargetOffset;
+            }
+            else if (Input.GetKey(KeyCode.S) && playerRb.linearVelocity.y == 0f)
+            {
+                positionComposer.TargetOffset.y = -CameraTargetOffset;
+            }
+            else
+            {
+                positionComposer.TargetOffset.y = 0f;
+            }
+
+        }
+        else
+        {
+            positionComposer.TargetOffset.y = 0f;
+        }
+
+
     }
 }
 

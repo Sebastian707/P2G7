@@ -1,16 +1,16 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
+using Unity.Cinemachine;
 
 public class PlayerController : MonoBehaviour
 {
-
     [Header("Audio Settings")]
     [SerializeField] private AudioClip jumpSound;
     [SerializeField] private AudioClip doubleJumpSound;
     [SerializeField] private AudioClip dashSound;
     [SerializeField] private AudioClip respawnSound;
-    private AudioSource audioSource; // Reference to AudioSource
+    private AudioSource audioSource;
 
 
     [Header("Movement Settings")]
@@ -107,9 +107,10 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    [System.Obsolete]
+
     private void Update()
     {
+
         if (Rb.linearVelocity.y < 0)
         {
             Rb.linearVelocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
@@ -149,7 +150,7 @@ public class PlayerController : MonoBehaviour
 
             float accelRate = Mathf.Abs(horizontalMovement) > 0.1f ? (IsGrounded() ? acceleration : airAcceleration) : (IsGrounded() ? deceleration : airDeceleration);
 
-            float movementForce = speedDifference * accelRate;
+           float movementForce = speedDifference * accelRate;
             Rb.linearVelocity = new Vector2(Rb.linearVelocity.x + movementForce * Time.deltaTime, Mathf.Max(Rb.linearVelocity.y, maxFallSpeed));
         }
 
@@ -233,16 +234,16 @@ public class PlayerController : MonoBehaviour
     {
         if (isFacingRight)
         {
-            Vector2 rotator = new Vector2(transform.rotation.x, 180f);
-            transform.rotation = Quaternion.Euler(rotator);
+          //Vector2 rotator = new Vector2(transform.rotation.x, 180f);
+          //  transform.rotation = Quaternion.Euler(rotator);
             isFacingRight = !isFacingRight;
 
             cameraFollowObject.CallTurn();
         }
         else
         {
-            Vector2 rotator = new Vector2(transform.rotation.x, 0f);
-            transform.rotation = Quaternion.Euler(rotator);
+           // Vector2 rotator = new Vector2(transform.rotation.x, 0f);
+           //transform.rotation = Quaternion.Euler(rotator);
             isFacingRight = !isFacingRight;
             cameraFollowObject.CallTurn();
         }
