@@ -2,43 +2,121 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("Movement")]
+    public float moveSpeed = 5f;
 
-    [SerializeField] private float movementSpeed = 5;
-    [SerializeField] private float jumpForce = 3;
-    //self references
-    private new Collider2D collider;
-    private Rigidbody2D Rb;
-    private void OnValidate()
+    [Header("Jump")]
+    public float jumpForce = 10f;
+    public int extraJumps = 1;
+
+    [Header("Coyote Time")]
+    public float coyoteTime = 0.1f;
+    private float coyoteTimeCounter;
+
+    [Header("Ground Check")]
+    public Transform groundCheck;
+    public float groundCheckRadius = 0.2f;
+    public LayerMask groundLayer;
+    private bool isGrounded;
+
+    private int extraJumpsRemaining;
+    [Header("Respawn/Death")]
+public GameObject deathEffectPrefab;
+public Transform respawnPoint;
+public float deathY = -10f;
+
+private float jumpResetTime = 3f;
+private float jumpResetTimer;
+
+
+    private Rigidbody2D rb;
+
+    void Start()
     {
-        collider = GetComponent<CapsuleCollider2D>();
-        Rb = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
+        extraJumpsRemaining = extraJumps;
     }
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
-        {
-            Rb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
 
+    void Update()
+    {
+        // Check if on ground
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+
+        if (isGrounded)
+        {
+            coyoteTimeCounter = coyoteTime;
+            extraJumpsRemaining = extraJumps;
+        }
+        else
+        {
+            coyoteTimeCounter -= Time.deltaTime;
+        }
+
+        // Jump input
+        if (Input.GetButtonDown("Jump"))
+        {
+            if (isGrounded || coyoteTimeCounter > 0f)
+            {
+                Jump();
+                coyoteTimeCounter = 0f;
+            }
+            else if (extraJumpsRemaining > 0)
+            {
+                Jump();
+                extraJumpsRemaining--;
+            }
+        }
+        if (transform.position.y < deathY)
+{
+    Die();
+}
+    }
+
+    void FixedUpdate()
+    {
+        // Horizontal movement
+        float moveInput = Input.GetAxisRaw("Horizontal");
+        rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
+    }
+
+    void Jump()
+    {
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f); // Reset vertical
+        rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+    }
+
+    void Die()
+    {
+        if (deathEffectPrefab != null)
+        {
+            Instantiate(deathEffectPrefab, transform.position, Quaternion.identity);
+        }
+
+        Respawn();
+    }
+
+    void Respawn()
+    {
+        transform.position = respawnPoint.position;
+        rb.linearVelocity = Vector2.zero;
+        extraJumpsRemaining = extraJumps;
+        jumpResetTimer = jumpResetTime;
+    }
+    void OnDrawGizmosSelected()
+    {
+        if (groundCheck != null)
+        {
+            Gizmos.color = Color.green;
+            Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
         }
     }
-    private void FixedUpdate()
-    {
-        Rb.position += Vector2.right * Input.GetAxis("Horizontal") * movementSpeed * Time.deltaTime;
 
-    }
+public void ApplyKnockback(Vector2 knockback)
+{
+    rb.linearVelocity = Vector2.zero;
+    rb.AddForce(knockback, ForceMode2D.Impulse);
 
-    public bool IsGrounded()
-    {
-
-        RaycastHit2D hit;
-        LayerMask mask = LayerMask.GetMask("Ground");
-        hit = Physics2D.Raycast(this.transform.position, Vector2.down, collider.bounds.extents.y + 0.1f, mask);
+}
 
 
-        return hit.collider != null;
-    }
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawRay(this.transform.position, Vector3.down * (collider.bounds.extents.y + 0.1f));
-    }
 }
