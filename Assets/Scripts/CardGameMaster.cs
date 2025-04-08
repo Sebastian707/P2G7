@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CardGameMaster : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class CardGameMaster : MonoBehaviour
         set
         {
             enemyHealth = value;
-            //enemyHealthText.text = $"Enemy health: {value}/{enemyMaxHealth}";
+            enemyHealthText.text = $"Enemy health: {value}/{enemyMaxHealth}";
         }
     }
     private void Awake()
@@ -43,5 +44,19 @@ public class CardGameMaster : MonoBehaviour
         enemy.TakeTurn();
         CardPlayerScript.instance.Energy = CardPlayerScript.instance.maxEnergy;
         CardPlayerScript.instance.DrawCard();
+    }
+    public static async void LoadScene(CardBattleData battleData)
+    {
+       await SceneManager.LoadSceneAsync("CardGameSJS", LoadSceneMode.Additive);
+       SceneManager.SetActiveScene(instance.gameObject.scene);
+        if (instance.enemy != null) GameObject.Destroy(instance.enemy.gameObject);
+        instance.enemy = Instantiate(battleData.enemyPrefab).GetComponent<CardEnemy>();
+        
+        
+    }
+    public void EndScene(bool won)
+    {
+
+        SceneManager.UnloadSceneAsync(gameObject.scene);
     }
 }

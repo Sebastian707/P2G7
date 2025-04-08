@@ -8,6 +8,46 @@ public class PlayerController : MonoBehaviour
     //self references
     private new Collider2D collider;
     private Rigidbody2D Rb;
+<<<<<<< Updated upstream
+=======
+    [SerializeField] private bool canDoubleJump = false;
+    private int doubleJumpsLeft = 0;
+
+    [Header("Dash Settings")]
+    [SerializeField] private bool CanDash = false;
+    [SerializeField] private float dashDistance = 5f;
+    [SerializeField] private float dashDuration = 0.5f;
+    [SerializeField] private int maxDashCharges = 3;
+    [SerializeField] private float chargeRestoreRate = 1f;
+
+    private int currentDashCharges;
+    private bool isDashing = false;
+    private float dashStartTime;
+    public TextMeshProUGUI dashText;
+    private float defaultMovementSpeed;
+    
+    [Header("Respawn Settings")]
+    [SerializeField] private Vector2 deathRecoil;
+    private Vector2 checkpointPosition;
+    public CanvasGroup fadeCanvasGroup;
+    public float fadeDuration = 1f;
+    private Transform _transform;
+    private Rigidbody2D _rigidbody;
+    public float deathDelay;
+    private bool isRespawning = false;
+    public float fadeLinger = 5f;
+
+    private float lastHorizontalInput = 0;
+    public bool isFacingRight = true;
+    private static PlayerController instance;
+
+    [Header("Camera")]
+    [SerializeField] private GameObject cameraFollowGO;
+    private CameraFollowObject cameraFollowObject;
+
+    private float horizontalInput;
+
+>>>>>>> Stashed changes
     private void OnValidate()
     {
         collider = GetComponent<CapsuleCollider2D>();

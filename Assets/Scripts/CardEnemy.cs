@@ -10,6 +10,7 @@ public class CardEnemy : MonoBehaviour, ICardPlayer
     private void Start()
     {
         CardGameMaster.instance.enemy = this;
+       
     }
     public int Health
     {
@@ -20,6 +21,8 @@ public class CardEnemy : MonoBehaviour, ICardPlayer
         set
         {
             health = value;
+            CardGameMaster.instance.EnemyHealth = value;
+            if (health <= 0) CardGameMaster.instance.EndScene(true);
         }
     }
     public void DrawCard(int amount = 1, GameObject cardPrefab = null)
