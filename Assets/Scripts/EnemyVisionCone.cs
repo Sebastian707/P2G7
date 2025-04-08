@@ -4,7 +4,7 @@ using UnityEngine;
 public class EnemyVisionCone : MonoBehaviour
 {
     public float viewDistance = 5f;
-    [Range(0, 360)] public float fov = 70f;
+    [Range(0, 360)] public float fov = 60f;
     public int rayCount = 50;
 
     public Transform enemyTransform;

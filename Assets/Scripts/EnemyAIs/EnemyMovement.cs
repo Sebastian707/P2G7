@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
@@ -53,6 +55,12 @@ public float stopDistance = 0.5f;
 [Header("Vision Settings")]
 public float viewDistance = 5f;
 [Range(0, 360)] public float fieldOfViewAngle = 60f;
+
+[Header("Combat")]
+public GameObject attackRangeTrigger;
+
+
+public Transform enemySpriteTransform;
 
 
 
@@ -157,42 +165,79 @@ else if (isChasing)
     isChasing = false;
 }
 
+float dist = Vector2.Distance(transform.position, player.position);
+if (dist <= attackRange && Time.time >= lastAttackTime)
+{
+    Attack();
 }
 
+if (attackRangeTrigger != null)
+{
+    Vector3 attackOffset = new Vector3(1f * direction, 0f, 0f); // distance in front of enemy
+    attackRangeTrigger.transform.localPosition = attackOffset;
+}
+
+UpdateAttackZonePosition();
+
+}
+
+void UpdateAttackZonePosition()
+{
+    if (attackRangeTrigger != null)
+    {
+        Vector3 offset = new Vector3(1f * direction, 0f, 0f);
+        attackRangeTrigger.transform.localPosition = offset;
+    }
+}
 
 void Attack()
 {
-    Debug.Log("Enemy attacks the player!");
+    if (Time.time < lastAttackTime + attackCooldown)
+        return;
 
-    // TODO: Damage player if you have a script for that.
-    // Example:
-    // player.GetComponent<PlayerHealth>().TakeDamage(1);
+    lastAttackTime = Time.time;
 
-    // You could also play an animation or sound here.
+    // Enable the attack zone briefly
+    StartCoroutine(EnableAttackZone());
 }
 
-    void Patrol()
+IEnumerator EnableAttackZone()
+{
+    attackRangeTrigger.SetActive(true);
+    yield return new WaitForSeconds(0.2f); // attack window
+    attackRangeTrigger.SetActive(false);
+}
+
+
+  void Patrol()
+{
+    rb.linearVelocity = new Vector2(direction * moveSpeed, rb.linearVelocity.y);
+
+    bool groundAhead = Physics2D.Raycast(groundAheadCheck.position, Vector2.down, edgeCheckDistance, groundLayer);
+    Debug.DrawRay(groundAheadCheck.position, Vector2.down * edgeCheckDistance, Color.red);
+
+    bool hitLeftLimit = direction < 0 && transform.position.x <= leftEdge.position.x + edgeBuffer;
+    bool hitRightLimit = direction > 0 && transform.position.x >= rightEdge.position.x - edgeBuffer;
+
+    if (!groundAhead || hitLeftLimit || hitRightLimit)
     {
-        rb.linearVelocity = new Vector2(direction * moveSpeed, rb.linearVelocity.y);
+        direction *= -1f;
 
-        // Ground detection in front
-        bool groundAhead = Physics2D.Raycast(groundAheadCheck.position, Vector2.down, edgeCheckDistance, groundLayer);
-        Debug.DrawRay(groundAheadCheck.position, Vector2.down * edgeCheckDistance, Color.red);
-
-        // Turn at platform edges
-        bool hitLeftLimit = direction < 0 && transform.position.x <= leftEdge.position.x + edgeBuffer;
-        bool hitRightLimit = direction > 0 && transform.position.x >= rightEdge.position.x - edgeBuffer;
-
-        if (!groundAhead || hitLeftLimit || hitRightLimit)
+        // 👉 Update the AttackZone side
+        if (attackRangeTrigger != null)
         {
-            direction *= -1f;
+            Vector3 offset = new Vector3(1f * direction, 0f, 0f);
+            attackRangeTrigger.transform.localPosition = offset;
         }
-
-        // Flip sprite
-        Vector3 scale = transform.localScale;
-        scale.x = Mathf.Abs(scale.x) * (direction > 0 ? 1 : -1);
-        transform.localScale = scale;
     }
+
+    // Flip sprite
+    Vector3 scale = transform.localScale;
+    scale.x = Mathf.Abs(scale.x) * (direction > 0 ? 1 : -1);
+    transform.localScale = scale;
+    
+}
+
 
     void Jump()
     {
