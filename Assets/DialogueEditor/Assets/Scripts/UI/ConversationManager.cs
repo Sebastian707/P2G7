@@ -102,6 +102,7 @@ namespace DialogueEditor
             NpcIcon.sprite = BlankSprite;
             DialogueText.text = "";
             TurnOffUI();
+
         }
 
         private void OnDestroy()

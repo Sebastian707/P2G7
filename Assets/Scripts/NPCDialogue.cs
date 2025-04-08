@@ -1,10 +1,8 @@
 using UnityEngine;
 using DialogueEditor;
-using Unity.VisualScripting;
 
 public class NPCDialogue : MonoBehaviour
 {
-
     public NPCConversation myConversation;
     public float conversationDistance = 3f;
     [SerializeField] private GameObject SpeechIndicaton;
@@ -12,36 +10,59 @@ public class NPCDialogue : MonoBehaviour
     private GameObject currentSpeechIndicator;
 
     private GameObject player;
+
+    [System.Obsolete]
+    private void Awake()
+    {
+        if (ConversationManager.Instance == null)
+        {
+            ConversationManager found = FindFirstObjectByType<ConversationManager>();
+            if (found != null)
+            {
+                typeof(ConversationManager)
+                    .GetProperty("Instance")
+                    ?.SetValue(null, found);
+            }
+        }
+    }
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+
     }
 
     private void Update()
     {
+
         if (IsPlayerNearby() && !ConversationManager.Instance.IsConversationActive)
         {
-            if (currentSpeechIndicator == null) 
+            if (currentSpeechIndicator == null)
             {
                 SpeechIndicator();
             }
         }
         else
         {
-            if (currentSpeechIndicator != null) 
+            if (currentSpeechIndicator != null)
             {
                 Destroy(currentSpeechIndicator);
                 currentSpeechIndicator = null;
             }
         }
 
+        // Start conversation on key press
         if (Input.GetKeyDown(KeyCode.E) && IsPlayerNearby() && !ConversationManager.Instance.IsConversationActive)
         {
             ConversationManager.Instance.StartConversation(myConversation);
             DisableMovementOfCurrentCharacter();
-            Destroy(currentSpeechIndicator);
+
+            if (currentSpeechIndicator != null)
+            {
+                Destroy(currentSpeechIndicator);
+                currentSpeechIndicator = null;
+            }
         }
-    
     }
 
     private bool IsPlayerNearby()
@@ -52,9 +73,8 @@ public class NPCDialogue : MonoBehaviour
             return distance <= conversationDistance;
         }
         return false;
-
-
     }
+
     private void DisableMovementOfCurrentCharacter()
     {
         PlayerController playerController = player.GetComponent<PlayerController>();
@@ -68,8 +88,6 @@ public class NPCDialogue : MonoBehaviour
     {
         currentSpeechIndicator = Instantiate(SpeechIndicaton, SpeechPosition.position, Quaternion.identity);
         currentSpeechIndicator.transform.SetParent(this.transform);
-
     }
-
 }
 

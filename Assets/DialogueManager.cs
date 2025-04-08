@@ -4,29 +4,40 @@ using UnityEngine;
 
 public class DialogueManager : MonoBehaviour
 {
-    public static DialogueManager Instance;
+    public static DialogueManager Instance { get; private set; }
 
-    private Dictionary<string, NPCConversation> dialogueStates = new Dictionary<string, NPCConversation>();
+    private Dictionary<string, string> savedConversationNames = new Dictionary<string, string>();
 
     private void Awake()
     {
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
-            return;
+        }
+        else
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+    }
+
+    public bool TryGetSavedConversation(string characterID, NPCConversation[] possibleConversations, out NPCConversation conversation)
+    {
+        if (savedConversationNames.TryGetValue(characterID, out var savedName))
+        {
+            conversation = System.Array.Find(possibleConversations, c => c.name == savedName);
+            return conversation != null;
         }
 
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
+        conversation = null;
+        return false;
     }
 
-    public void RegisterDialogueState(string characterID, NPCConversation currentConversation)
+    public void RegisterDialogueState(string characterID, NPCConversation conversation)
     {
-        dialogueStates[characterID] = currentConversation;
-    }
-
-    public bool TryGetSavedConversation(string characterID, out NPCConversation conversation)
-    {
-        return dialogueStates.TryGetValue(characterID, out conversation);
+        if (conversation != null)
+        {
+            savedConversationNames[characterID] = conversation.name;
+        }
     }
 }

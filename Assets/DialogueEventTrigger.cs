@@ -19,13 +19,15 @@ public class DialogueEventTrigger : MonoBehaviour
 
         if (DialogueManager.Instance != null)
         {
-            if (DialogueManager.Instance.TryGetSavedConversation(characterID, out var savedConversation))
+            if (DialogueManager.Instance.TryGetSavedConversation(characterID, possibleConversations, out var savedConversation))
             {
                 npcDialogue.myConversation = savedConversation;
+                Debug.Log($"[DialogueEventTrigger] {characterID} loaded saved conversation: {savedConversation.name}");
             }
             else
             {
                 DialogueManager.Instance.RegisterDialogueState(characterID, npcDialogue.myConversation);
+                Debug.Log($"[DialogueEventTrigger] {characterID} registered initial conversation: {npcDialogue.myConversation.name}");
             }
         }
     }
