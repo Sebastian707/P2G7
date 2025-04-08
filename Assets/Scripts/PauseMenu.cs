@@ -8,15 +8,22 @@ public class PauseMenu : MonoBehaviour
 
     private void Start()
     {
-        // Ensure the pause menu is hidden when the game starts
-        //pauseMenu.SetActive(false);
-        //Time.timeScale = 1f;
+        if (pauseMenu == null)
+        {
+            Debug.LogError("Pause menu reference is missing!");
+        }
+        else
+        {
+            pauseMenu.SetActive(false);
+        }
+
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            Debug.Log("ESC pressed in Update");
             TogglePauseMenu();
         }
     }
@@ -24,28 +31,37 @@ public class PauseMenu : MonoBehaviour
     public void TogglePauseMenu()
     {
         isPaused = !isPaused;
-        pauseMenu.SetActive(isPaused);
+        Debug.Log("Pause toggled: " + isPaused);
 
-        // Use unscaled time so ESC input still works when paused
+        if (pauseMenu != null)
+        {
+            pauseMenu.SetActive(isPaused);
+        }
+
         Time.timeScale = isPaused ? 0f : 1f;
     }
 
     public void Continue()
     {
         isPaused = false;
-        pauseMenu.SetActive(false);
+
+        if (pauseMenu != null)
+        {
+            pauseMenu.SetActive(false);
+        }
+
         Time.timeScale = 1f;
     }
 
     public void Options()
     {
-        // Implement settings menu logic here
+        // Placeholder for options/settings logic
         Time.timeScale = 1f;
     }
 
     public void QuitToMenu()
     {
-        SceneManager.LoadScene("Main Menu");
         Time.timeScale = 1f;
+        SceneManager.LoadScene("Main Menu");
     }
 }

@@ -187,7 +187,7 @@ public class PlayerController : MonoBehaviour
             float movementForce = speedDifference * accelRate;
             Rb.linearVelocity = new Vector2(Rb.linearVelocity.x + movementForce * Time.deltaTime, Mathf.Max(Rb.linearVelocity.y, maxFallSpeed));  // Apply clamped fall speed
 
-            Debug.Log(Rb.linearVelocity.x);
+            //Debug.Log(Rb.linearVelocity.x);
         }
     }
 
