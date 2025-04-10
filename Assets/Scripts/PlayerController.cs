@@ -64,13 +64,20 @@ public class PlayerController : MonoBehaviour
     private bool isRespawning = false;
     public float fadeLinger = 5f;
 
-    private float lastHorizontalInput = 0;
     public bool isFacingRight = true;
     private static PlayerController instance;
 
     [Header("Camera")]
     [SerializeField] private GameObject cameraFollowGO;
     private CameraFollowObject cameraFollowObject;
+
+    [Header("Grapple Settings")]
+    public float grappleSpeed = 5f;          // How fast the player gets pulled
+    public float snapDistance = 0.1f;        // Distance at which we stop pulling
+    private LineRenderer line;
+    private Transform currentTarget;
+    private Rigidbody2D rb;
+    private float originalGravity;
 
     private float horizontalInput;
 
@@ -108,6 +115,12 @@ public class PlayerController : MonoBehaviour
         }
 
         cameraFollowObject = cameraFollowGO.GetComponent<CameraFollowObject>();
+
+        // Grapple Setup
+        line = GetComponent<LineRenderer>();
+        line.positionCount = 0;
+        rb = GetComponent<Rigidbody2D>();
+        originalGravity = rb.gravityScale;
     }
 
     private void Update()
@@ -150,6 +163,17 @@ public class PlayerController : MonoBehaviour
         {
             dashText.text = CanDash ? "Dashes: " + currentDashCharges + " / " + maxDashCharges : "";
         }
+
+        if (Input.GetKey(KeyCode.Q))
+        {
+            rb.gravityScale = 0f;
+            FindAndPullToClosestGrapplePoint();
+
+        }
+        else
+        {
+            StopGrapple();
+        }
     }
 
     private void FixedUpdate()
@@ -158,7 +182,6 @@ public class PlayerController : MonoBehaviour
 
         Vector2 velocity = Rb.linearVelocity;
 
-        // FALLING AND LOW-JUMP PHYSICS
         if (velocity.y < 0)
         {
             velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.fixedDeltaTime;
@@ -168,10 +191,8 @@ public class PlayerController : MonoBehaviour
             velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.fixedDeltaTime;
         }
 
-        // CLAMP FALL SPEED
         velocity.y = Mathf.Max(velocity.y, maxFallSpeed);
 
-        // HANDLE JUMP
         if (jumpBufferCounter > 0f)
         {
             if (CoyoteTimeCounter > 0f)
@@ -197,7 +218,6 @@ public class PlayerController : MonoBehaviour
             CoyoteTimeCounter = 0f;
         }
 
-        // MOVE HORIZONTALLY WITH ACCELERATION
         float targetSpeed = horizontalInput * movementSpeed;
         float speedDifference = targetSpeed - velocity.x;
         float accelRate = Mathf.Abs(horizontalInput) > 0.1f ?
@@ -301,4 +321,60 @@ public class PlayerController : MonoBehaviour
             audioSource.PlayOneShot(clip);
         }
     }
+
+    void FindAndPullToClosestGrapplePoint()
+    {
+        GameObject[] grapplePoints = GameObject.FindGameObjectsWithTag("GrapplePoint");
+        float closestDist = float.MaxValue;
+        Transform closest = null;
+
+        foreach (GameObject point in grapplePoints)
+        {
+            GrapplePoint gp = point.GetComponent<GrapplePoint>();
+            if (gp != null && gp.IsPlayerInRange())
+            {
+                float dist = Vector2.Distance(transform.position, point.transform.position);
+                if (dist < closestDist)
+                {
+                    closestDist = dist;
+                    closest = point.transform;
+                }
+            }
+        }
+
+        if (closest != null)
+        {
+            currentTarget = closest;
+
+            Vector2 direction = (currentTarget.position - transform.position).normalized;
+            float distance = Vector2.Distance(transform.position, currentTarget.position);
+
+            if (distance > snapDistance)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, currentTarget.position, grappleSpeed * Time.deltaTime);
+            }
+
+            line.positionCount = 2;
+            line.SetPosition(0, transform.position);
+            line.SetPosition(1, currentTarget.position);
+        }
+        else
+        {
+            StopGrapple();
+        }
+
+        if (PlayerController.instance != null)
+        {
+            PlayerController.instance.EnableDoubleJump(true); 
+            PlayerController.instance.doubleJumpsLeft = PlayerController.instance.maxDoubleJumps; 
+        }
+    }
+
+    void StopGrapple()
+    {
+        rb.gravityScale = originalGravity;
+        currentTarget = null;
+        line.positionCount = 0;
+    }
+
 }
