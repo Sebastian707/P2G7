@@ -11,7 +11,6 @@ public class NPCDialogue : MonoBehaviour
 
     private GameObject player;
 
-    [System.Obsolete]
     private void Awake()
     {
         if (ConversationManager.Instance == null)
