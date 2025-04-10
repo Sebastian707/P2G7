@@ -7,7 +7,6 @@ public class PlayerAnimator : MonoBehaviour
     private Vector2 lastMoveDirection;
 
     private bool isJumping = false;
-
     public LayerMask groundLayer;
 
     void Start()
@@ -25,35 +24,16 @@ public class PlayerAnimator : MonoBehaviour
         {
             isJumping = true;
             anim.SetBool("IsJumping", true);
-            // Optional: Apply jump force if physics-based jump
-
-            /*
-            // Set the jump direction animation based on movement
-            if (input.x > 0)
-            {
-                anim.SetBool("IsJumpingRight", true);
-                anim.SetBool("IsJumpingLeft", false);
-            }
-            else if (input.x < 0)
-            {
-                anim.SetBool("IsJumpingLeft", true);
-                anim.SetBool("IsJumpingRight", false);
-            }
-            else
-            {
-                // If no horizontal movement, keep the current facing direction
-                anim.SetBool("IsJumpingRight", false);
-                anim.SetBool("IsJumpingLeft", false);
-            }
-            */
         }
     }
 
     void ProcessInputs()
     {
+        // Capture horizontal and vertical input
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
 
+        // Update the last move direction when the player stops moving
         if ((moveX == 0 && moveY == 0) && (input.x != 0 || input.y != 0))
         {
             lastMoveDirection = input;
@@ -64,31 +44,31 @@ public class PlayerAnimator : MonoBehaviour
 
     void Animate()
     {
-        anim.SetFloat("MoveX", input.x);
-        anim.SetFloat("MoveY", input.y);
-        anim.SetFloat("MoveMagnitude", input.magnitude);
-        anim.SetFloat("LastMoveX", lastMoveDirection.x);
-        anim.SetFloat("LastMoveY", lastMoveDirection.y);
+        anim.SetFloat("MoveX", input.x);    // Used for horizontal movement animation
+        anim.SetFloat("MoveMagnitude", input.magnitude);  // Controls the walking/running animation speed
+        anim.SetFloat("LastMoveX", lastMoveDirection.x);  // Last horizontal movement direction
 
+        // Set the facing direction for animation based on horizontal input
         if (input.x > 0)
         {
-            anim.SetFloat("FacingX", -1);
+            anim.SetFloat("FacingX", -1); // Facing right
         }
         else if (input.x < 0)
         {
-            anim.SetFloat("FacingX", 1);
+            anim.SetFloat("FacingX", 1);  // Facing left
         }
-       
+
+        // If you plan to use vertical movement, uncomment the line below to use "MoveY"
+        // anim.SetFloat("MoveY", input.y);  // For vertical animations like jumping, falling, etc.
     }
+
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if ((groundLayer.value & (1 << collision.gameObject.layer)) != 0) // Or your terrain layer
+        // Reset jump state when player lands on ground
+        if ((groundLayer.value & (1 << collision.gameObject.layer)) != 0)
         {
             isJumping = false;
             anim.SetBool("IsJumping", false);
-            //anim.SetBool("IsJumpingLeft", false);
-            //anim.SetBool("IsJumpingRight", false);
         }
     }
-
 }
