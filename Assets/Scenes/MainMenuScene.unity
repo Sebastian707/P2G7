@@ -6118,7 +6118,7 @@ MonoBehaviour:
   CreditsMenu: {fileID: 357528129}
   ConfirmMenu: {fileID: 2040910332}
   audioSource: {fileID: 701184467}
-  buttonClickSound: {fileID: 8300000, guid: da1a24a16feb28b4fb6a71168ea27cc3, type: 3}
+  buttonClickSound: {fileID: 0}
   targetScene: UlrichTestScene
   entranceName: InitialSpawn
 --- !u!82 &701184467
