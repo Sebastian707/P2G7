@@ -5,10 +5,11 @@ public class MainMenu : MonoBehaviour
 {
     [SerializeField] private GameObject playMenu;
     [SerializeField] private GameObject CreditsMenu;
+    [SerializeField] private GameObject ConfirmMenu;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip buttonClickSound;
     [SerializeField] private string targetScene;
-    [SerializeField]private string entranceName;
+    [SerializeField] private string entranceName;
 
     [System.Obsolete]
     public void OnBegin()
@@ -28,11 +29,22 @@ public class MainMenu : MonoBehaviour
         CreditsMenu.SetActive(false);
     }
 
-
     public void OnQuit()
+    {
+        ConfirmMenu.SetActive(true);
+    }
+
+
+    public void OnConfirmQuit()
     {
         //Application.Quit();
         UnityEditor.EditorApplication.isPlaying = false;
+    }
+
+    public void OnConfirmDeny()
+    {
+        ConfirmMenu.SetActive(false);
+        
     }
 
     public void OnClick()
