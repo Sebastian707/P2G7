@@ -749,8 +749,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 17
-  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":100.666656,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Let''s
-    a go","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Enclave
+  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":289,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"I
+    told my wife she should embrace her mistakes. She gave me a hug.\r\n","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Enclave
     Soldier","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0.5}]}'
   saveVersion: 110
   DefaultName: 

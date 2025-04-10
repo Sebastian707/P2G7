@@ -255,6 +255,7 @@ public class PlayerController : MonoBehaviour
     {
         isDashing = false;
         movementSpeed = defaultMovementSpeed;
+ 
         Rb.gravityScale = 1f;
         canDoubleJump = true;
     }
