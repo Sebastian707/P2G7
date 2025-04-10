@@ -72,8 +72,9 @@ public class PlayerController : MonoBehaviour
     private CameraFollowObject cameraFollowObject;
 
     [Header("Grapple Settings")]
-    public float grappleSpeed = 5f;          // How fast the player gets pulled
-    public float snapDistance = 0.1f;        // Distance at which we stop pulling
+    [SerializeField] private float grappleSpeed = 5f;        
+    [SerializeField] private float snapDistance = 0.1f;
+    [SerializeField] private bool CanGrapple = false;
     private LineRenderer line;
     private Transform currentTarget;
     private Rigidbody2D rb;
@@ -164,7 +165,7 @@ public class PlayerController : MonoBehaviour
             dashText.text = CanDash ? "Dashes: " + currentDashCharges + " / " + maxDashCharges : "";
         }
 
-        if (Input.GetKey(KeyCode.Q))
+        if (Input.GetKey(KeyCode.Q) && CanGrapple)
         {
             rb.gravityScale = 0f;
             FindAndPullToClosestGrapplePoint();
@@ -173,6 +174,11 @@ public class PlayerController : MonoBehaviour
         else
         {
             StopGrapple();
+        }
+        if (Input.GetKeyUp(KeyCode.Space) && Rb.linearVelocity.y > 0)
+        {
+            Rb.linearVelocity = new Vector2(Rb.linearVelocity.x, Rb.linearVelocity.y * varJump);
+            CoyoteTimeCounter = 0f;
         }
     }
 
@@ -210,12 +216,6 @@ public class PlayerController : MonoBehaviour
                 jumpBufferCounter = 0f;
                 PlaySound(doubleJumpSound);
             }
-        }
-
-        if (Input.GetKeyUp(KeyCode.Space) && velocity.y > 0)
-        {
-            velocity.y *= varJump;
-            CoyoteTimeCounter = 0f;
         }
 
         float targetSpeed = horizontalInput * movementSpeed;
@@ -366,7 +366,7 @@ public class PlayerController : MonoBehaviour
 
         if (PlayerController.instance != null)
         {
-            PlayerController.instance.EnableDoubleJump(true); 
+        
             PlayerController.instance.doubleJumpsLeft = PlayerController.instance.maxDoubleJumps; 
         }
     }
