@@ -40,9 +40,9 @@ TextureImporter:
     filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
-    wrapW: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -72,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -113,10 +113,11 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape:
-      - - {x: -4, y: 53}
-        - {x: 64, y: 53}
-        - {x: 64, y: 60}
-        - {x: -4, y: 60}
+      - - {x: -12, y: 14}
+        - {x: -2, y: -10}
+        - {x: 64, y: -10}
+        - {x: 64, y: 40}
+        - {x: -12, y: 40}
       tessellationDetail: 0
       bones: []
       spriteID: d0a3ab8b832f0be20800000000000000
@@ -139,14 +140,14 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape:
-      - - {x: -64, y: 53}
-        - {x: 64, y: 53}
-        - {x: 64, y: 60}
-        - {x: -64, y: 60}
+      - - {x: -64, y: -10}
+        - {x: 64, y: -10}
+        - {x: 64, y: 40}
+        - {x: -64, y: 40}
       tessellationDetail: 0
       bones: []
-      spriteID: f0366269d659f8740abc452cb2157891
-      internalID: -818239659
+      spriteID: a2d9718599d320148848dca4dfa8f0f5
+      internalID: -2631050
       vertices: []
       indices: 
       edges: []
@@ -165,14 +166,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape:
-      - - {x: -64, y: 53}
-        - {x: 64, y: 53}
-        - {x: 64, y: 60}
-        - {x: -64, y: 60}
+      - - {x: -64, y: -10}
+        - {x: 0, y: -10}
+        - {x: 7, y: 18}
+        - {x: 16, y: 23}
+        - {x: 16, y: 40}
+        - {x: -64, y: 40}
       tessellationDetail: 0
       bones: []
-      spriteID: 7d7bdc617de302e4c87445d81ec66220
-      internalID: 1959604961
+      spriteID: 747414a1ae5083f43a7c67950370b270
+      internalID: 1958448054
       vertices: []
       indices: 
       edges: []
@@ -181,7 +184,7 @@ TextureImporter:
       name: stage1tilemap_3
       rect:
         serializedVersion: 2
-        x: 384
+        x: 512
         y: 1152
         width: 128
         height: 128
@@ -191,14 +194,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape:
-      - - {x: -64, y: 53}
-        - {x: 4, y: 53}
-        - {x: 4, y: 60}
-        - {x: -64, y: 60}
+      - - {x: -64, y: -64}
+        - {x: 45, y: -64}
+        - {x: 45, y: -44}
+        - {x: 64, y: -44}
+        - {x: 64, y: 64}
+        - {x: -64, y: 64}
       tessellationDetail: 0
       bones: []
-      spriteID: 1d085c31d24aa53448b56f290270543d
-      internalID: -2107592636
+      spriteID: 2b34727fc3d4a4848b5408201ebf666b
+      internalID: 248329903
       vertices: []
       indices: 
       edges: []
@@ -207,7 +212,7 @@ TextureImporter:
       name: stage1tilemap_4
       rect:
         serializedVersion: 2
-        x: 512
+        x: 640
         y: 1152
         width: 128
         height: 128
@@ -217,16 +222,14 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape:
-      - - {x: -64, y: -64}
-        - {x: 56, y: -64}
-        - {x: 56, y: -56}
-        - {x: 64, y: -56}
+      - - {x: -64, y: -44}
+        - {x: 64, y: -44}
         - {x: 64, y: 64}
         - {x: -64, y: 64}
       tessellationDetail: 0
       bones: []
-      spriteID: fae01b40e1e791f42b382e02684a6abe
-      internalID: -992991127
+      spriteID: f6fcc3923cfa4fe4cabec6fafacf65ed
+      internalID: 1363333363
       vertices: []
       indices: 
       edges: []
@@ -235,7 +238,7 @@ TextureImporter:
       name: stage1tilemap_5
       rect:
         serializedVersion: 2
-        x: 640
+        x: 768
         y: 1152
         width: 128
         height: 128
@@ -245,14 +248,16 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape:
-      - - {x: -64, y: -56}
-        - {x: 64, y: -56}
+      - - {x: -64, y: -44}
+        - {x: -43, y: -44}
+        - {x: -43, y: -64}
+        - {x: 64, y: -64}
         - {x: 64, y: 64}
         - {x: -64, y: 64}
       tessellationDetail: 0
       bones: []
-      spriteID: 8405b7bf34ebd1c44a2631ca784f5aab
-      internalID: 1273769288
+      spriteID: 86f36d90a410d88438d746b6acd1eaa3
+      internalID: -1077862513
       vertices: []
       indices: 
       edges: []
@@ -261,7 +266,7 @@ TextureImporter:
       name: stage1tilemap_6
       rect:
         serializedVersion: 2
-        x: 768
+        x: 896
         y: 1152
         width: 128
         height: 128
@@ -271,16 +276,14 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape:
-      - - {x: -64, y: -56}
-        - {x: -56, y: -56}
-        - {x: -56, y: -64}
+      - - {x: -39, y: -64}
         - {x: 64, y: -64}
-        - {x: 64, y: 64}
-        - {x: -64, y: 64}
+        - {x: 64, y: 36}
+        - {x: -39, y: 36}
       tessellationDetail: 0
       bones: []
-      spriteID: b9035b041382782429568afff2a20f46
-      internalID: -2092926181
+      spriteID: ee64a25500b773544a2b54827e1f7306
+      internalID: -1539390059
       vertices: []
       indices: 
       edges: []
@@ -289,7 +292,7 @@ TextureImporter:
       name: stage1tilemap_7
       rect:
         serializedVersion: 2
-        x: 896
+        x: 1024
         y: 1152
         width: 128
         height: 128
@@ -300,15 +303,13 @@ TextureImporter:
       outline: []
       physicsShape:
       - - {x: -64, y: -64}
-        - {x: 56, y: -64}
-        - {x: 56, y: -56}
-        - {x: 64, y: -56}
-        - {x: 64, y: 64}
-        - {x: -64, y: 64}
+        - {x: 31, y: -64}
+        - {x: 31, y: 36}
+        - {x: -64, y: 36}
       tessellationDetail: 0
       bones: []
-      spriteID: 5ec719b817a047344932502722b13ff2
-      internalID: -1190385258
+      spriteID: ee7b5af5f8900f445a73d80b2b9a7034
+      internalID: 1257462226
       vertices: []
       indices: 
       edges: []
@@ -317,8 +318,8 @@ TextureImporter:
       name: stage1tilemap_8
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 1152
+        x: 0
+        y: 1024
         width: 128
         height: 128
       alignment: 0
@@ -327,14 +328,15 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape:
-      - - {x: -64, y: -56}
-        - {x: 64, y: -56}
-        - {x: 64, y: 64}
-        - {x: -64, y: 64}
+      - - {x: -6, y: 26}
+        - {x: 17, y: -29}
+        - {x: 64, y: -29}
+        - {x: 64, y: 53}
+        - {x: -6, y: 53}
       tessellationDetail: 0
       bones: []
-      spriteID: 63f03669ce39a9b4e8f539a7d5d122ae
-      internalID: -38401015
+      spriteID: 4c778e74d38b8c74ba13595b2a370c46
+      internalID: -7242460
       vertices: []
       indices: 
       edges: []
@@ -343,8 +345,8 @@ TextureImporter:
       name: stage1tilemap_9
       rect:
         serializedVersion: 2
-        x: 1152
-        y: 1152
+        x: 128
+        y: 1024
         width: 128
         height: 128
       alignment: 0
@@ -353,16 +355,14 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape:
-      - - {x: -64, y: -56}
-        - {x: -56, y: -56}
-        - {x: -56, y: -64}
-        - {x: 64, y: -64}
-        - {x: 64, y: 64}
-        - {x: -64, y: 64}
+      - - {x: -64, y: -29}
+        - {x: 64, y: -29}
+        - {x: 64, y: 53}
+        - {x: -64, y: 53}
       tessellationDetail: 0
       bones: []
-      spriteID: 067aea9003e1c63488ac809f818afcb7
-      internalID: 1785126432
+      spriteID: e1cb145e442edaf45b90ac7bd9c3b1e3
+      internalID: 1768933822
       vertices: []
       indices: 
       edges: []
@@ -371,7 +371,7 @@ TextureImporter:
       name: stage1tilemap_10
       rect:
         serializedVersion: 2
-        x: 0
+        x: 256
         y: 1024
         width: 128
         height: 128
@@ -380,11 +380,15 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -64, y: -29}
+        - {x: 64, y: -29}
+        - {x: 64, y: 53}
+        - {x: -64, y: 53}
       tessellationDetail: 0
       bones: []
-      spriteID: 2a4f269456b07f940986b0fb544a09e6
-      internalID: -1740323550
+      spriteID: 89827e4eefb8f2d4081f980dc04a2ca0
+      internalID: -464510278
       vertices: []
       indices: 
       edges: []
@@ -393,7 +397,7 @@ TextureImporter:
       name: stage1tilemap_11
       rect:
         serializedVersion: 2
-        x: 128
+        x: 384
         y: 1024
         width: 128
         height: 128
@@ -402,11 +406,17 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -64, y: -29}
+        - {x: -9, y: -29}
+        - {x: -5, y: 2}
+        - {x: 10, y: 30}
+        - {x: 10, y: 53}
+        - {x: -64, y: 53}
       tessellationDetail: 0
       bones: []
-      spriteID: 32de34d8885f24d4c9a5a90936e6e44f
-      internalID: 759862768
+      spriteID: 29065ae122dc3db459878f17261d84f2
+      internalID: 1769042427
       vertices: []
       indices: 
       edges: []
@@ -415,7 +425,7 @@ TextureImporter:
       name: stage1tilemap_12
       rect:
         serializedVersion: 2
-        x: 256
+        x: 512
         y: 1024
         width: 128
         height: 128
@@ -424,11 +434,15 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -64, y: -64}
+        - {x: 45, y: -64}
+        - {x: 45, y: 64}
+        - {x: -64, y: 64}
       tessellationDetail: 0
       bones: []
-      spriteID: dfce5bf9d21d7da418106f32ebe7811c
-      internalID: -1066687713
+      spriteID: a47cf821839819f4d8ca0e4ac4caff14
+      internalID: -1154978561
       vertices: []
       indices: 
       edges: []
@@ -437,7 +451,7 @@ TextureImporter:
       name: stage1tilemap_13
       rect:
         serializedVersion: 2
-        x: 384
+        x: 640
         y: 1024
         width: 128
         height: 128
@@ -449,8 +463,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 12e0055863be2ac4a97c64b790809594
-      internalID: 1583093512
+      spriteID: 228061b8539db3d40b767e52c310ecf5
+      internalID: -288582037
       vertices: []
       indices: 
       edges: []
@@ -459,7 +473,7 @@ TextureImporter:
       name: stage1tilemap_14
       rect:
         serializedVersion: 2
-        x: 512
+        x: 768
         y: 1024
         width: 128
         height: 128
@@ -469,14 +483,14 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape:
-      - - {x: -64, y: -64}
-        - {x: 56, y: -64}
-        - {x: 56, y: 64}
-        - {x: -64, y: 64}
+      - - {x: -43, y: -64}
+        - {x: 64, y: -64}
+        - {x: 64, y: 64}
+        - {x: -43, y: 64}
       tessellationDetail: 0
       bones: []
-      spriteID: 332d5f1c266cdc34089f9557c4caef8e
-      internalID: -1400570127
+      spriteID: 8967245c54d702d41a833faea9311e60
+      internalID: -1206110462
       vertices: []
       indices: 
       edges: []
@@ -485,7 +499,7 @@ TextureImporter:
       name: stage1tilemap_15
       rect:
         serializedVersion: 2
-        x: 640
+        x: 896
         y: 1024
         width: 128
         height: 128
@@ -495,14 +509,14 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape:
-      - - {x: -64, y: -64}
-        - {x: 64, y: -64}
+      - - {x: -39, y: -31}
+        - {x: 64, y: -32}
         - {x: 64, y: 64}
-        - {x: -64, y: 64}
+        - {x: -39, y: 64}
       tessellationDetail: 0
       bones: []
-      spriteID: 4fbbecf458701a0409c59755abad79f1
-      internalID: 209788259
+      spriteID: bd4488542ae8b8340bc61345f57a046f
+      internalID: -278522422
       vertices: []
       indices: 
       edges: []
@@ -511,7 +525,7 @@ TextureImporter:
       name: stage1tilemap_16
       rect:
         serializedVersion: 2
-        x: 768
+        x: 1024
         y: 1024
         width: 128
         height: 128
@@ -521,14 +535,14 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape:
-      - - {x: -56, y: -64}
-        - {x: 64, y: -64}
-        - {x: 64, y: 64}
-        - {x: -56, y: 64}
+      - - {x: -64, y: -32}
+        - {x: 31, y: -32}
+        - {x: 31, y: 64}
+        - {x: -64, y: 64}
       tessellationDetail: 0
       bones: []
-      spriteID: c3493e0afaa05c54ba0c5aa7f36df912
-      internalID: 2107310147
+      spriteID: c5fb8b9b1c4c129498872ea3f77b3229
+      internalID: 103024639
       vertices: []
       indices: 
       edges: []
@@ -537,8 +551,8 @@ TextureImporter:
       name: stage1tilemap_17
       rect:
         serializedVersion: 2
-        x: 896
-        y: 1024
+        x: 0
+        y: 896
         width: 128
         height: 128
       alignment: 0
@@ -547,14 +561,14 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape:
-      - - {x: -64, y: -64}
-        - {x: 56, y: -64}
-        - {x: 56, y: 64}
-        - {x: -64, y: 64}
+      - - {x: -5, y: -64}
+        - {x: 64, y: -64}
+        - {x: 64, y: -12}
+        - {x: -5, y: -12}
       tessellationDetail: 0
       bones: []
-      spriteID: 3548bd000e6851f448d601d0178453ab
-      internalID: 531320146
+      spriteID: 3cd75f92cfadba846aad9fb61936b76e
+      internalID: -70141260
       vertices: []
       indices: 
       edges: []
@@ -563,8 +577,8 @@ TextureImporter:
       name: stage1tilemap_18
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 1024
+        x: 128
+        y: 896
         width: 128
         height: 128
       alignment: 0
@@ -575,12 +589,12 @@ TextureImporter:
       physicsShape:
       - - {x: -64, y: -64}
         - {x: 64, y: -64}
-        - {x: 64, y: 64}
-        - {x: -64, y: 64}
+        - {x: 64, y: -12}
+        - {x: -64, y: -12}
       tessellationDetail: 0
       bones: []
-      spriteID: 3c7528b21b6e4514191b381c23d489d3
-      internalID: -1768623951
+      spriteID: f605b6358dd0c154eaaba1794560bcd5
+      internalID: -1600897399
       vertices: []
       indices: 
       edges: []
@@ -589,8 +603,8 @@ TextureImporter:
       name: stage1tilemap_19
       rect:
         serializedVersion: 2
-        x: 1152
-        y: 1024
+        x: 256
+        y: 896
         width: 128
         height: 128
       alignment: 0
@@ -599,14 +613,14 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape:
-      - - {x: -56, y: -64}
-        - {x: 64, y: -64}
-        - {x: 64, y: 64}
-        - {x: -56, y: 64}
+      - - {x: 8, y: -12}
+        - {x: -64, y: -12}
+        - {x: -64, y: -64}
+        - {x: 8, y: -64}
       tessellationDetail: 0
       bones: []
-      spriteID: 94e89a22a808c5948a7a2f892cf38926
-      internalID: 443751325
+      spriteID: 373609d557a09844a9b873a7e34cd0f0
+      internalID: 505099678
       vertices: []
       indices: 
       edges: []
@@ -615,7 +629,7 @@ TextureImporter:
       name: stage1tilemap_20
       rect:
         serializedVersion: 2
-        x: 0
+        x: 384
         y: 896
         width: 128
         height: 128
@@ -627,8 +641,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 253fffccd0082394bafdaf755c57fb7a
-      internalID: -1731873195
+      spriteID: 309d728e03dbf1740b205612e184cac9
+      internalID: -735689663
       vertices: []
       indices: 
       edges: []
@@ -637,7 +651,7 @@ TextureImporter:
       name: stage1tilemap_21
       rect:
         serializedVersion: 2
-        x: 128
+        x: 512
         y: 896
         width: 128
         height: 128
@@ -646,11 +660,17 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -64, y: -64}
+        - {x: 64, y: -64}
+        - {x: 64, y: 44}
+        - {x: 45, y: 44}
+        - {x: 45, y: 64}
+        - {x: -64, y: 64}
       tessellationDetail: 0
       bones: []
-      spriteID: 8220a3f40e462474ca0e21ce26c3d04b
-      internalID: 862891638
+      spriteID: dbb96e95c9297014b8c097b018e3231f
+      internalID: 705800131
       vertices: []
       indices: 
       edges: []
@@ -659,7 +679,7 @@ TextureImporter:
       name: stage1tilemap_22
       rect:
         serializedVersion: 2
-        x: 256
+        x: 640
         y: 896
         width: 128
         height: 128
@@ -668,11 +688,15 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -64, y: -64}
+        - {x: 64, y: -64}
+        - {x: 64, y: 44}
+        - {x: -64, y: 44}
       tessellationDetail: 0
       bones: []
-      spriteID: 3e66eb3659efab54dbf97e4d23f8883a
-      internalID: -1247020711
+      spriteID: 2c40be4801d338d498d536ef7a056cdd
+      internalID: -1041150616
       vertices: []
       indices: 
       edges: []
@@ -681,7 +705,7 @@ TextureImporter:
       name: stage1tilemap_23
       rect:
         serializedVersion: 2
-        x: 384
+        x: 768
         y: 896
         width: 128
         height: 128
@@ -690,11 +714,15 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -33, y: -38}
+        - {x: 39, y: -38}
+        - {x: 39, y: 33}
+        - {x: -33, y: 33}
       tessellationDetail: 0
       bones: []
-      spriteID: 3071e0a3a3b619a4ea25ba05631cf698
-      internalID: -1591787683
+      spriteID: 8dd7cd82ac77a0b41a95d619e96194e9
+      internalID: -629186511
       vertices: []
       indices: 
       edges: []
@@ -703,7 +731,7 @@ TextureImporter:
       name: stage1tilemap_24
       rect:
         serializedVersion: 2
-        x: 512
+        x: 896
         y: 896
         width: 128
         height: 128
@@ -712,17 +740,11 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape:
-      - - {x: -64, y: -64}
-        - {x: 64, y: -64}
-        - {x: 64, y: 56}
-        - {x: 56, y: 56}
-        - {x: 56, y: 64}
-        - {x: -64, y: 64}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 61cfec1e4a9be5f4b99906ee1e236003
-      internalID: -350494284
+      spriteID: 18216a049f9345641a249958443b3a70
+      internalID: 1256207301
       vertices: []
       indices: 
       edges: []
@@ -731,7 +753,7 @@ TextureImporter:
       name: stage1tilemap_25
       rect:
         serializedVersion: 2
-        x: 640
+        x: 1024
         y: 896
         width: 128
         height: 128
@@ -740,15 +762,11 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape:
-      - - {x: -64, y: -64}
-        - {x: 64, y: -64}
-        - {x: 64, y: 57}
-        - {x: -64, y: 56}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd22d7aa4f848674e8bf041b30cb557c
-      internalID: -1005544195
+      spriteID: 8bfb3f822c0eb9c49a7750e5d6ede2b7
+      internalID: 1616448978
       vertices: []
       indices: 
       edges: []
@@ -757,7 +775,7 @@ TextureImporter:
       name: stage1tilemap_26
       rect:
         serializedVersion: 2
-        x: 768
+        x: 1152
         y: 896
         width: 128
         height: 128
@@ -766,17 +784,11 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape:
-      - - {x: -56, y: 57}
-        - {x: -64, y: 57}
-        - {x: -64, y: -64}
-        - {x: 64, y: -64}
-        - {x: 64, y: 64}
-        - {x: -56, y: 64}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 331e2a43863ef62428fbc0bba2f0452a
-      internalID: 1752217623
+      spriteID: f04a44a3bd735e04080876b2482404c6
+      internalID: 1134379868
       vertices: []
       indices: 
       edges: []
@@ -785,8 +797,8 @@ TextureImporter:
       name: stage1tilemap_27
       rect:
         serializedVersion: 2
-        x: 896
-        y: 896
+        x: 0
+        y: 768
         width: 128
         height: 128
       alignment: 0
@@ -795,16 +807,14 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape:
-      - - {x: -64, y: -64}
-        - {x: 64, y: -64}
-        - {x: 64, y: 56}
-        - {x: 56, y: 56}
-        - {x: 56, y: 64}
-        - {x: -64, y: 64}
+      - - {x: -5, y: 12}
+        - {x: 64, y: 12}
+        - {x: 64, y: 64}
+        - {x: -5, y: 64}
       tessellationDetail: 0
       bones: []
-      spriteID: 3ff4f3cff5137d64dadb5d3383158726
-      internalID: 225497401
+      spriteID: f071181c54066f04484e28cbdefb75bd
+      internalID: 1724156847
       vertices: []
       indices: 
       edges: []
@@ -813,8 +823,8 @@ TextureImporter:
       name: stage1tilemap_28
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 896
+        x: 128
+        y: 768
         width: 128
         height: 128
       alignment: 0
@@ -823,14 +833,14 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape:
-      - - {x: -64, y: -64}
-        - {x: 64, y: -64}
-        - {x: 64, y: 57}
-        - {x: -64, y: 56}
+      - - {x: -64, y: 12}
+        - {x: 64, y: 12}
+        - {x: 64, y: 64}
+        - {x: -64, y: 64}
       tessellationDetail: 0
       bones: []
-      spriteID: e5365f440d04500439c94cb5f91fe094
-      internalID: -1590503114
+      spriteID: 9e8bdd192608919498328062eb162200
+      internalID: 1830541412
       vertices: []
       indices: 
       edges: []
@@ -839,8 +849,8 @@ TextureImporter:
       name: stage1tilemap_29
       rect:
         serializedVersion: 2
-        x: 1152
-        y: 896
+        x: 256
+        y: 768
         width: 128
         height: 128
       alignment: 0
@@ -849,16 +859,14 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape:
-      - - {x: -56, y: 57}
-        - {x: -64, y: 57}
-        - {x: -64, y: -64}
-        - {x: 64, y: -64}
-        - {x: 64, y: 64}
-        - {x: -56, y: 64}
+      - - {x: -64, y: 12}
+        - {x: 8, y: 12}
+        - {x: 8, y: 64}
+        - {x: -64, y: 64}
       tessellationDetail: 0
       bones: []
-      spriteID: 0b79c56d21e49eb4aabd415ac7ad149f
-      internalID: 1321835756
+      spriteID: 3ac8af02d0b8ce747a1e1e2c01eebf82
+      internalID: 1474457137
       vertices: []
       indices: 
       edges: []
@@ -867,7 +875,7 @@ TextureImporter:
       name: stage1tilemap_30
       rect:
         serializedVersion: 2
-        x: 0
+        x: 384
         y: 768
         width: 128
         height: 128
@@ -879,8 +887,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67d5a4096bf29fc4da056c6e73bdd428
-      internalID: 605692406
+      spriteID: 69ac36de89ffa4b4f9412d0131e66ef9
+      internalID: 510612494
       vertices: []
       indices: 
       edges: []
@@ -889,7 +897,7 @@ TextureImporter:
       name: stage1tilemap_31
       rect:
         serializedVersion: 2
-        x: 128
+        x: 512
         y: 768
         width: 128
         height: 128
@@ -901,8 +909,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d905e51db7743d4fbf78b22b07523fc
-      internalID: -645240218
+      spriteID: abf4c600ff429d147b93489913f18b8a
+      internalID: -2055809609
       vertices: []
       indices: 
       edges: []
@@ -911,7 +919,7 @@ TextureImporter:
       name: stage1tilemap_32
       rect:
         serializedVersion: 2
-        x: 256
+        x: 640
         y: 768
         width: 128
         height: 128
@@ -923,8 +931,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5e8f880abd87cf41b97e69475246fb5
-      internalID: 777332532
+      spriteID: 26286ad4fa1f3a2458b4e9541b53e06d
+      internalID: 1555685365
       vertices: []
       indices: 
       edges: []
@@ -933,7 +941,7 @@ TextureImporter:
       name: stage1tilemap_33
       rect:
         serializedVersion: 2
-        x: 384
+        x: 768
         y: 768
         width: 128
         height: 128
@@ -945,8 +953,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c12d80d2b857914db0a966366a47d9b
-      internalID: 69132101
+      spriteID: 5d6624e1e2cd15c439f7f796c29b0abc
+      internalID: -1768360244
       vertices: []
       indices: 
       edges: []
@@ -955,7 +963,7 @@ TextureImporter:
       name: stage1tilemap_34
       rect:
         serializedVersion: 2
-        x: 512
+        x: 896
         y: 768
         width: 128
         height: 128
@@ -967,8 +975,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 55ac365f2b489a14dbb0830c7395a68d
-      internalID: -1129759803
+      spriteID: 5471a9d8319f499418e7478050ab204c
+      internalID: 1432412138
       vertices: []
       indices: 
       edges: []
@@ -977,7 +985,7 @@ TextureImporter:
       name: stage1tilemap_35
       rect:
         serializedVersion: 2
-        x: 640
+        x: 1024
         y: 768
         width: 128
         height: 128
@@ -989,8 +997,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54b7e3576b6509442bd61dab9cefe636
-      internalID: 1517929324
+      spriteID: 0dd53e64254ea7e40a0c596b84018619
+      internalID: -2043568006
       vertices: []
       indices: 
       edges: []
@@ -999,7 +1007,7 @@ TextureImporter:
       name: stage1tilemap_36
       rect:
         serializedVersion: 2
-        x: 768
+        x: 1152
         y: 768
         width: 128
         height: 128
@@ -1008,15 +1016,11 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape:
-      - - {x: -56, y: -64}
-        - {x: 64, y: -64}
-        - {x: 64, y: 56}
-        - {x: -56, y: 57}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc7dd5fc26b1ac84abde275b092e5aa3
-      internalID: -431977477
+      spriteID: e433db98eb9c55d4190c5fc1b5072af3
+      internalID: 1831633214
       vertices: []
       indices: 
       edges: []
@@ -1025,8 +1029,8 @@ TextureImporter:
       name: stage1tilemap_37
       rect:
         serializedVersion: 2
-        x: 896
-        y: 768
+        x: 0
+        y: 640
         width: 128
         height: 128
       alignment: 0
@@ -1035,14 +1039,14 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape:
-      - - {x: -64, y: -64}
-        - {x: 56, y: -64}
-        - {x: 56, y: 56}
-        - {x: -64, y: 56}
+      - - {x: 5, y: -64}
+        - {x: 64, y: -64}
+        - {x: 64, y: 3}
+        - {x: 5, y: 3}
       tessellationDetail: 0
       bones: []
-      spriteID: 180d0bbd248851249aa42d97a02118b0
-      internalID: -907308248
+      spriteID: 49a328e4f97d5aa4ca1a8f1a5a7d1c3d
+      internalID: 1941261810
       vertices: []
       indices: 
       edges: []
@@ -1051,34 +1055,8 @@ TextureImporter:
       name: stage1tilemap_38
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 768
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: -56, y: -64}
-        - {x: 64, y: -64}
-        - {x: 64, y: 56}
-        - {x: -56, y: 57}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2f889244ae3b5a64a94b91054d37502e
-      internalID: 1352536998
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: stage1tilemap_39
-      rect:
-        serializedVersion: 2
-        x: 1152
-        y: 768
+        x: 128
+        y: 640
         width: 128
         height: 128
       alignment: 0
@@ -1088,13 +1066,35 @@ TextureImporter:
       outline: []
       physicsShape:
       - - {x: -64, y: -64}
-        - {x: 56, y: -64}
-        - {x: 56, y: 56}
-        - {x: -64, y: 56}
+        - {x: -3, y: -64}
+        - {x: -3, y: 3}
+        - {x: -64, y: 3}
       tessellationDetail: 0
       bones: []
-      spriteID: 104a0b2b067aa1f408084e0ef5f83158
-      internalID: 790887850
+      spriteID: 6092b6c9473b1f448b93b8c2d9a11040
+      internalID: -493532321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stage1tilemap_39
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d34b594ae7edc149bc456f1b822b823
+      internalID: 1636882236
       vertices: []
       indices: 
       edges: []
@@ -1103,7 +1103,7 @@ TextureImporter:
       name: stage1tilemap_40
       rect:
         serializedVersion: 2
-        x: 0
+        x: 384
         y: 640
         width: 128
         height: 128
@@ -1115,8 +1115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 747a538ae085e5f47851cde003d0b454
-      internalID: -610433234
+      spriteID: 0e2e1b237ff6fdf4d990074428162385
+      internalID: -722564420
       vertices: []
       indices: 
       edges: []
@@ -1125,7 +1125,7 @@ TextureImporter:
       name: stage1tilemap_41
       rect:
         serializedVersion: 2
-        x: 128
+        x: 512
         y: 640
         width: 128
         height: 128
@@ -1137,8 +1137,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 79fd5ef91776b6145afb82eabcb54984
-      internalID: -987540352
+      spriteID: 5567823a28101f64fa5ea4f11dba9d9d
+      internalID: -1430786583
       vertices: []
       indices: 
       edges: []
@@ -1147,7 +1147,7 @@ TextureImporter:
       name: stage1tilemap_42
       rect:
         serializedVersion: 2
-        x: 256
+        x: 640
         y: 640
         width: 128
         height: 128
@@ -1159,8 +1159,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d7de0e3310855e44b3dd79bea1367f3
-      internalID: -538616783
+      spriteID: 5cec5e59b3b82bf4ab395f18f7ca4cf8
+      internalID: -1569483433
       vertices: []
       indices: 
       edges: []
@@ -1169,7 +1169,7 @@ TextureImporter:
       name: stage1tilemap_43
       rect:
         serializedVersion: 2
-        x: 384
+        x: 768
         y: 640
         width: 128
         height: 128
@@ -1181,8 +1181,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c1afebc3f38f6e42aba3f6cb7eac114
-      internalID: 889288516
+      spriteID: a5ea33141ed85494db0249205eb76588
+      internalID: -1028007161
       vertices: []
       indices: 
       edges: []
@@ -1191,7 +1191,7 @@ TextureImporter:
       name: stage1tilemap_44
       rect:
         serializedVersion: 2
-        x: 512
+        x: 896
         y: 640
         width: 128
         height: 128
@@ -1203,8 +1203,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 572c03038a35e8c42831c86b1251724c
-      internalID: 1012807930
+      spriteID: 86a1b9e46c0740e478032076806c9798
+      internalID: -1821053067
       vertices: []
       indices: 
       edges: []
@@ -1213,7 +1213,7 @@ TextureImporter:
       name: stage1tilemap_45
       rect:
         serializedVersion: 2
-        x: 640
+        x: 1024
         y: 640
         width: 128
         height: 128
@@ -1225,8 +1225,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 06c7fa021711439489ed91f1a6f0b205
-      internalID: 2020302187
+      spriteID: fde4e95f3d364694dbb3ce7997501c0f
+      internalID: -143588000
       vertices: []
       indices: 
       edges: []
@@ -1235,7 +1235,7 @@ TextureImporter:
       name: stage1tilemap_46
       rect:
         serializedVersion: 2
-        x: 768
+        x: 1152
         y: 640
         width: 128
         height: 128
@@ -1244,15 +1244,11 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape:
-      - - {x: -56, y: -56}
-        - {x: 64, y: -56}
-        - {x: 64, y: 64}
-        - {x: -56, y: 64}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 55caf6e339545b24ca984c5d1397e210
-      internalID: 792568655
+      spriteID: 1cf0d258817818748bbbf194ef1060eb
+      internalID: -1711396821
       vertices: []
       indices: 
       edges: []
@@ -1261,8 +1257,8 @@ TextureImporter:
       name: stage1tilemap_47
       rect:
         serializedVersion: 2
-        x: 896
-        y: 640
+        x: 0
+        y: 512
         width: 128
         height: 128
       alignment: 0
@@ -1271,14 +1267,14 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape:
-      - - {x: -64, y: -56}
-        - {x: 56, y: -56}
-        - {x: 56, y: 64}
-        - {x: -64, y: 64}
+      - - {x: 5, y: -64}
+        - {x: 64, y: -64}
+        - {x: 64, y: 64}
+        - {x: 5, y: 64}
       tessellationDetail: 0
       bones: []
-      spriteID: 33e765d202cb6a342aa69549c3ea8326
-      internalID: 228304745
+      spriteID: 8131ce9072f1950419c455d637824d62
+      internalID: -1188790039
       vertices: []
       indices: 
       edges: []
@@ -1287,8 +1283,8 @@ TextureImporter:
       name: stage1tilemap_48
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 640
+        x: 128
+        y: 512
         width: 128
         height: 128
       alignment: 0
@@ -1297,14 +1293,14 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape:
-      - - {x: -56, y: -56}
-        - {x: 64, y: -56}
-        - {x: 64, y: 64}
-        - {x: -56, y: 64}
+      - - {x: -64, y: -64}
+        - {x: -3, y: -64}
+        - {x: -3, y: 64}
+        - {x: -64, y: 64}
       tessellationDetail: 0
       bones: []
-      spriteID: 315b2c06a2985fa468374a9041adffaf
-      internalID: -1457063385
+      spriteID: 7546b4df3df7cb64587864a1cb16f3a6
+      internalID: 2146476421
       vertices: []
       indices: 
       edges: []
@@ -1313,8 +1309,8 @@ TextureImporter:
       name: stage1tilemap_49
       rect:
         serializedVersion: 2
-        x: 1152
-        y: 640
+        x: 256
+        y: 512
         width: 128
         height: 128
       alignment: 0
@@ -1322,15 +1318,11 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape:
-      - - {x: -64, y: -56}
-        - {x: 56, y: -56}
-        - {x: 56, y: 64}
-        - {x: -64, y: 64}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 079b693c29329ae4ebaafab11b7524b1
-      internalID: 592228997
+      spriteID: d178162644b95794aade7c14ab5bf3e9
+      internalID: 1936905261
       vertices: []
       indices: 
       edges: []
@@ -1339,7 +1331,7 @@ TextureImporter:
       name: stage1tilemap_50
       rect:
         serializedVersion: 2
-        x: 0
+        x: 384
         y: 512
         width: 128
         height: 128
@@ -1351,8 +1343,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dfeac0bba893d524c986be2a1764c7f6
-      internalID: -663409314
+      spriteID: f5f3da6e2224a7f44ac306193bcd5eb0
+      internalID: -1230758666
       vertices: []
       indices: 
       edges: []
@@ -1361,7 +1353,7 @@ TextureImporter:
       name: stage1tilemap_51
       rect:
         serializedVersion: 2
-        x: 128
+        x: 512
         y: 512
         width: 128
         height: 128
@@ -1373,8 +1365,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e87dde783a567db448fc08dc5c7ecff8
-      internalID: 228629204
+      spriteID: 43fdf2eadd5ccbf4fb84bbddb75dbbb5
+      internalID: 1867743273
       vertices: []
       indices: 
       edges: []
@@ -1383,7 +1375,7 @@ TextureImporter:
       name: stage1tilemap_52
       rect:
         serializedVersion: 2
-        x: 256
+        x: 640
         y: 512
         width: 128
         height: 128
@@ -1395,8 +1387,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3c2fe04d475fa343bb8835abdc547bb
-      internalID: -2040570505
+      spriteID: 1ae02a51693ae8e468de28dc7bb05b32
+      internalID: -426844270
       vertices: []
       indices: 
       edges: []
@@ -1405,7 +1397,7 @@ TextureImporter:
       name: stage1tilemap_53
       rect:
         serializedVersion: 2
-        x: 384
+        x: 768
         y: 512
         width: 128
         height: 128
@@ -1417,8 +1409,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d0075d3cf06bd0d41ba0724c95540ea5
-      internalID: 1184435210
+      spriteID: 4db69b2ecefa66a4fa5911190c7d1601
+      internalID: 2091343419
       vertices: []
       indices: 
       edges: []
@@ -1427,7 +1419,7 @@ TextureImporter:
       name: stage1tilemap_54
       rect:
         serializedVersion: 2
-        x: 512
+        x: 896
         y: 512
         width: 128
         height: 128
@@ -1439,8 +1431,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5399e55626176be4e828b36621afa771
-      internalID: -176230793
+      spriteID: ec2a24ee69c65a942a1ccbd8146e69af
+      internalID: -1137962085
       vertices: []
       indices: 
       edges: []
@@ -1449,7 +1441,7 @@ TextureImporter:
       name: stage1tilemap_55
       rect:
         serializedVersion: 2
-        x: 640
+        x: 1024
         y: 512
         width: 128
         height: 128
@@ -1461,8 +1453,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4a567422bcb7c04bbf06054396f06c4
-      internalID: -1191593495
+      spriteID: 6777390a1b322a74ea93674ffb16d484
+      internalID: -845754506
       vertices: []
       indices: 
       edges: []
@@ -1471,7 +1463,7 @@ TextureImporter:
       name: stage1tilemap_56
       rect:
         serializedVersion: 2
-        x: 768
+        x: 1152
         y: 512
         width: 128
         height: 128
@@ -1483,8 +1475,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c5aeb2d2c46c16459b9dd3946f082d8
-      internalID: 1959786663
+      spriteID: aaf91c140c7f75543a6fba56f0b1b221
+      internalID: -918555894
       vertices: []
       indices: 
       edges: []
@@ -1493,8 +1485,8 @@ TextureImporter:
       name: stage1tilemap_57
       rect:
         serializedVersion: 2
-        x: 896
-        y: 512
+        x: 0
+        y: 384
         width: 128
         height: 128
       alignment: 0
@@ -1502,11 +1494,15 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 5, y: -9}
+        - {x: 64, y: -9}
+        - {x: 64, y: 64}
+        - {x: 5, y: 64}
       tessellationDetail: 0
       bones: []
-      spriteID: 06a431957f352024f828128a36afa336
-      internalID: 2005835703
+      spriteID: c2320d380062cca4391ac8fba51a78bf
+      internalID: 815952073
       vertices: []
       indices: 
       edges: []
@@ -1515,8 +1511,8 @@ TextureImporter:
       name: stage1tilemap_58
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 512
+        x: 128
+        y: 384
         width: 128
         height: 128
       alignment: 0
@@ -1524,11 +1520,15 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -64, y: -9}
+        - {x: -3, y: -9}
+        - {x: -3, y: 64}
+        - {x: -64, y: 64}
       tessellationDetail: 0
       bones: []
-      spriteID: 556622c720cfaa44a8fd73f36f07edda
-      internalID: -1170196241
+      spriteID: df53915ab84098440bc418c826ab56b2
+      internalID: 2027137072
       vertices: []
       indices: 
       edges: []
@@ -1537,8 +1537,8 @@ TextureImporter:
       name: stage1tilemap_59
       rect:
         serializedVersion: 2
-        x: 1152
-        y: 512
+        x: 256
+        y: 384
         width: 128
         height: 128
       alignment: 0
@@ -1549,8 +1549,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0558280fe57f9784c98044ab4413452d
-      internalID: 965091110
+      spriteID: f233e2966bb13bb408e84dd073ee1db1
+      internalID: -1700606806
       vertices: []
       indices: 
       edges: []
@@ -1559,7 +1559,7 @@ TextureImporter:
       name: stage1tilemap_60
       rect:
         serializedVersion: 2
-        x: 0
+        x: 384
         y: 384
         width: 128
         height: 128
@@ -1571,8 +1571,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 61fc1b96901d9d34d8a6012e4a52d889
-      internalID: 1549657674
+      spriteID: 7ca4e1a3d6756e94d92d1d00a77a2ac9
+      internalID: 905338749
       vertices: []
       indices: 
       edges: []
@@ -1581,7 +1581,7 @@ TextureImporter:
       name: stage1tilemap_61
       rect:
         serializedVersion: 2
-        x: 128
+        x: 512
         y: 384
         width: 128
         height: 128
@@ -1593,8 +1593,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: addf7db5d63f12549b1ade071118125c
-      internalID: -719361325
+      spriteID: 1a54abb71096ca6438a00b6c6c477060
+      internalID: -8649611
       vertices: []
       indices: 
       edges: []
@@ -1603,7 +1603,7 @@ TextureImporter:
       name: stage1tilemap_62
       rect:
         serializedVersion: 2
-        x: 256
+        x: 640
         y: 384
         width: 128
         height: 128
@@ -1615,8 +1615,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df8c86256616cb54f90a0be8dab34216
-      internalID: 739488145
+      spriteID: f1d53dc4403d2744a88af85b041aead3
+      internalID: -1031115411
       vertices: []
       indices: 
       edges: []
@@ -1625,7 +1625,7 @@ TextureImporter:
       name: stage1tilemap_63
       rect:
         serializedVersion: 2
-        x: 384
+        x: 768
         y: 384
         width: 128
         height: 128
@@ -1637,8 +1637,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6d9f8fc6c2106b479350e60355f368b
-      internalID: -249029047
+      spriteID: bfef9b6671d112c49831c0757d76e9ff
+      internalID: 1952435418
       vertices: []
       indices: 
       edges: []
@@ -1647,7 +1647,7 @@ TextureImporter:
       name: stage1tilemap_64
       rect:
         serializedVersion: 2
-        x: 512
+        x: 896
         y: 384
         width: 128
         height: 128
@@ -1659,8 +1659,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9354eeac267e644ba1304c58c2110bc
-      internalID: 1161092285
+      spriteID: 05dab7ded89852e49b0f3323cf5a88e6
+      internalID: -1088587460
       vertices: []
       indices: 
       edges: []
@@ -1669,7 +1669,7 @@ TextureImporter:
       name: stage1tilemap_65
       rect:
         serializedVersion: 2
-        x: 640
+        x: 1024
         y: 384
         width: 128
         height: 128
@@ -1681,8 +1681,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60b724fa0740bde4d803aef50c384563
-      internalID: -933517585
+      spriteID: 58a8378f5f208524ab7b682ed00ccc52
+      internalID: -1535626485
       vertices: []
       indices: 
       edges: []
@@ -1691,7 +1691,7 @@ TextureImporter:
       name: stage1tilemap_66
       rect:
         serializedVersion: 2
-        x: 768
+        x: 1152
         y: 384
         width: 128
         height: 128
@@ -1703,8 +1703,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5eb93b204d7359a4fb51ab0f195d3c35
-      internalID: -556021657
+      spriteID: 05df87b00d4aa8a44b66e25f3ddeab84
+      internalID: 1651924535
       vertices: []
       indices: 
       edges: []
@@ -1713,8 +1713,8 @@ TextureImporter:
       name: stage1tilemap_67
       rect:
         serializedVersion: 2
-        x: 896
-        y: 384
+        x: 0
+        y: 256
         width: 128
         height: 128
       alignment: 0
@@ -1725,8 +1725,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6297b840f58ee749b3f88f9774aa13a
-      internalID: -1443727780
+      spriteID: 6ee858d893e20464ba08bbbabc73066b
+      internalID: -1575105717
       vertices: []
       indices: 
       edges: []
@@ -1735,8 +1735,8 @@ TextureImporter:
       name: stage1tilemap_68
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 384
+        x: 128
+        y: 256
         width: 128
         height: 128
       alignment: 0
@@ -1747,8 +1747,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ecbe19c9ac314914588c08e99f2c54f5
-      internalID: 1446228748
+      spriteID: 76358c8c0a646034d8b78887553a4b79
+      internalID: -1105872257
       vertices: []
       indices: 
       edges: []
@@ -1757,8 +1757,8 @@ TextureImporter:
       name: stage1tilemap_69
       rect:
         serializedVersion: 2
-        x: 1152
-        y: 384
+        x: 256
+        y: 256
         width: 128
         height: 128
       alignment: 0
@@ -1769,8 +1769,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89d8d26fc07264f478f187c66458a4bc
-      internalID: -913179519
+      spriteID: 10b821611f0584649a0c99d7f3ff4d02
+      internalID: -1788453858
       vertices: []
       indices: 
       edges: []
@@ -1779,7 +1779,7 @@ TextureImporter:
       name: stage1tilemap_70
       rect:
         serializedVersion: 2
-        x: 0
+        x: 384
         y: 256
         width: 128
         height: 128
@@ -1791,8 +1791,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e5b1b83e2148c94cb0ddb555c437909
-      internalID: -825206858
+      spriteID: 252699d6aee37d24c81b1b62071075de
+      internalID: 418080684
       vertices: []
       indices: 
       edges: []
@@ -1801,7 +1801,7 @@ TextureImporter:
       name: stage1tilemap_71
       rect:
         serializedVersion: 2
-        x: 128
+        x: 512
         y: 256
         width: 128
         height: 128
@@ -1813,8 +1813,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f6eae5cba9ab1e4bbb328b1fbae40af
-      internalID: 1191630685
+      spriteID: 4a1c9be2165474844a77970b824a171b
+      internalID: 1117748793
       vertices: []
       indices: 
       edges: []
@@ -1823,7 +1823,7 @@ TextureImporter:
       name: stage1tilemap_72
       rect:
         serializedVersion: 2
-        x: 256
+        x: 640
         y: 256
         width: 128
         height: 128
@@ -1835,8 +1835,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: efddf5ef1a3f85748b872836ac232272
-      internalID: -990789363
+      spriteID: 37d1340d7ac1a27489ffd477943027ce
+      internalID: -242038847
       vertices: []
       indices: 
       edges: []
@@ -1845,7 +1845,7 @@ TextureImporter:
       name: stage1tilemap_73
       rect:
         serializedVersion: 2
-        x: 384
+        x: 768
         y: 256
         width: 128
         height: 128
@@ -1857,8 +1857,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4dbeb19f628837542a774cd3dd47b941
-      internalID: -1462630363
+      spriteID: dbb73bad0edeeb24296cbc396d2d8e5f
+      internalID: 1268206109
       vertices: []
       indices: 
       edges: []
@@ -1867,7 +1867,7 @@ TextureImporter:
       name: stage1tilemap_74
       rect:
         serializedVersion: 2
-        x: 512
+        x: 896
         y: 256
         width: 128
         height: 128
@@ -1879,8 +1879,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10f2c06bc6de55e46bed638cd9e6e2cb
-      internalID: -1921106302
+      spriteID: 79f4ba0f9ecaa10409603bf9720bc323
+      internalID: 706008549
       vertices: []
       indices: 
       edges: []
@@ -1889,7 +1889,7 @@ TextureImporter:
       name: stage1tilemap_75
       rect:
         serializedVersion: 2
-        x: 640
+        x: 1024
         y: 256
         width: 128
         height: 128
@@ -1901,8 +1901,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f480b7520f92a474c980265feee17024
-      internalID: 670085409
+      spriteID: 8334ba267f5a67041b7f3253a527ba1c
+      internalID: 60487792
       vertices: []
       indices: 
       edges: []
@@ -1911,7 +1911,7 @@ TextureImporter:
       name: stage1tilemap_76
       rect:
         serializedVersion: 2
-        x: 768
+        x: 1152
         y: 256
         width: 128
         height: 128
@@ -1923,8 +1923,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4cdae3fd2a5390a4db82eb80c70949eb
-      internalID: -938738053
+      spriteID: 88ea30ddcc8e8224189bc2baa1c19275
+      internalID: 776398283
       vertices: []
       indices: 
       edges: []
@@ -1933,8 +1933,8 @@ TextureImporter:
       name: stage1tilemap_77
       rect:
         serializedVersion: 2
-        x: 896
-        y: 256
+        x: 0
+        y: 128
         width: 128
         height: 128
       alignment: 0
@@ -1945,8 +1945,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ceef73ad5c0691b45b35bd16cec1a586
-      internalID: 1099518588
+      spriteID: 83cdea5f090553d438c0da9dfcd5610b
+      internalID: -744780192
       vertices: []
       indices: 
       edges: []
@@ -1955,8 +1955,8 @@ TextureImporter:
       name: stage1tilemap_78
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 256
+        x: 128
+        y: 128
         width: 128
         height: 128
       alignment: 0
@@ -1967,8 +1967,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aac44fbef99ba024babf61981c0e3e3f
-      internalID: -1596343221
+      spriteID: 042a029b051dd0b4ca8ecfbf69200536
+      internalID: 1805594330
       vertices: []
       indices: 
       edges: []
@@ -1977,8 +1977,8 @@ TextureImporter:
       name: stage1tilemap_79
       rect:
         serializedVersion: 2
-        x: 1152
-        y: 256
+        x: 256
+        y: 128
         width: 128
         height: 128
       alignment: 0
@@ -1989,8 +1989,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e416ba860474054b94edc4500401288
-      internalID: 790472055
+      spriteID: 28d2e40b033ca5443bd757c8dd768199
+      internalID: 1506670720
       vertices: []
       indices: 
       edges: []
@@ -1999,7 +1999,7 @@ TextureImporter:
       name: stage1tilemap_80
       rect:
         serializedVersion: 2
-        x: 0
+        x: 384
         y: 128
         width: 128
         height: 128
@@ -2011,8 +2011,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1032918eb879c884fb9148c1bd3ecfe5
-      internalID: 1273894246
+      spriteID: a5298ded1ef99cb4f9f36b713a63741e
+      internalID: -1079848053
       vertices: []
       indices: 
       edges: []
@@ -2021,72 +2021,6 @@ TextureImporter:
       name: stage1tilemap_81
       rect:
         serializedVersion: 2
-        x: 128
-        y: 128
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6ec549a8ecdc60d4e89cbf1adb885224
-      internalID: 907728427
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: stage1tilemap_82
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 128
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7060908eedd1e154cb4a7063692f88cb
-      internalID: 183471951
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: stage1tilemap_83
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 128
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 89a4b1ffc3f3db24191e63c269a93696
-      internalID: 492715767
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: stage1tilemap_84
-      rect:
-        serializedVersion: 2
         x: 512
         y: 128
         width: 128
@@ -2099,14 +2033,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d2eecf2291558440892f8162f040839
-      internalID: -2002663030
+      spriteID: 40611b2ddac9bdd44906ae4f34f045b2
+      internalID: -637097378
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: stage1tilemap_85
+      name: stage1tilemap_82
       rect:
         serializedVersion: 2
         x: 640
@@ -2121,14 +2055,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f35b435a8dbaebe4db72a9b4e6fdce51
-      internalID: -195815612
+      spriteID: 383c55caef02dee449ef6b9bd1d4cb6b
+      internalID: -1615051968
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: stage1tilemap_86
+      name: stage1tilemap_83
       rect:
         serializedVersion: 2
         x: 768
@@ -2143,14 +2077,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5bfe29f16b172b4ebad85fc5b65d389
-      internalID: -758807202
+      spriteID: dbb2dbc27f87a154ca1d4a4e90b2b6ad
+      internalID: -1731803269
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: stage1tilemap_87
+      name: stage1tilemap_84
       rect:
         serializedVersion: 2
         x: 896
@@ -2165,14 +2099,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 51ce0cd61a27c864f887b4d0b8249c2a
-      internalID: -1701248520
+      spriteID: 4ac70b1a3c152b440b90d393d7486dad
+      internalID: -386911198
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: stage1tilemap_88
+      name: stage1tilemap_85
       rect:
         serializedVersion: 2
         x: 1024
@@ -2187,14 +2121,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 31c7c9a03d676744f8b740dfd21a9ffb
-      internalID: -1640426318
+      spriteID: cb15fe9b8b9c3af44a817bee5d477b98
+      internalID: -1961603627
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: stage1tilemap_89
+      name: stage1tilemap_86
       rect:
         serializedVersion: 2
         x: 1152
@@ -2209,14 +2143,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 729f2ca18e3c53841977e850109891dd
-      internalID: -723416785
+      spriteID: 858a2590d29b547439a247dd7b032f9f
+      internalID: -1888337683
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: stage1tilemap_90
+      name: stage1tilemap_87
       rect:
         serializedVersion: 2
         x: 0
@@ -2231,14 +2165,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a16d93d29ffb844fb522bc90cac4bac
-      internalID: -1521502863
+      spriteID: 473b9db715823ea429f4181f42df4842
+      internalID: 1082430051
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: stage1tilemap_91
+      name: stage1tilemap_88
       rect:
         serializedVersion: 2
         x: 128
@@ -2253,14 +2187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 996b4830d9e2bb54ebc747b1a5b4702c
-      internalID: -554661676
+      spriteID: 8b1f053d9906e82489b7337fc40e6b67
+      internalID: 459347997
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: stage1tilemap_92
+      name: stage1tilemap_89
       rect:
         serializedVersion: 2
         x: 256
@@ -2275,14 +2209,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: adf3a1fa0f7c3114c91ffaac5616cebe
-      internalID: 1841068235
+      spriteID: a33475740a5865d42b54a6c51b9c69c3
+      internalID: -1004133111
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: stage1tilemap_93
+      name: stage1tilemap_90
       rect:
         serializedVersion: 2
         x: 384
@@ -2297,14 +2231,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62559316098df364895cd8b0f3980295
-      internalID: -1362381351
+      spriteID: 0f2f1e3c7cccbb142934db9714ca5492
+      internalID: -178994428
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: stage1tilemap_94
+      name: stage1tilemap_91
       rect:
         serializedVersion: 2
         x: 512
@@ -2319,14 +2253,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2804230826112314cb27e37b26b3c44b
-      internalID: 49889974
+      spriteID: e7753e868005bad48b3466717c0b427c
+      internalID: 1892994705
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: stage1tilemap_95
+      name: stage1tilemap_92
       rect:
         serializedVersion: 2
         x: 640
@@ -2341,14 +2275,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8b7c69dcce16134588d6e6d86a13386
-      internalID: 674224274
+      spriteID: 21237dcd74a668f45ac1a6c9786e2158
+      internalID: -1356201349
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: stage1tilemap_96
+      name: stage1tilemap_93
       rect:
         serializedVersion: 2
         x: 768
@@ -2363,14 +2297,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eeacfcea7ec98b547af749319f5bc21f
-      internalID: -983361877
+      spriteID: 22731bde66ee3f84dbb15b399e4a5019
+      internalID: 699912500
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: stage1tilemap_97
+      name: stage1tilemap_94
       rect:
         serializedVersion: 2
         x: 896
@@ -2385,14 +2319,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c7f0cae4b96d654c8a9730493d66a64
-      internalID: 1014752300
+      spriteID: 82152a25993d5464fb31aa6397a8b9df
+      internalID: 1300053123
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: stage1tilemap_98
+      name: stage1tilemap_95
       rect:
         serializedVersion: 2
         x: 1024
@@ -2407,14 +2341,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ed85ed523ed7c741a87dc783e011038
-      internalID: 882718998
+      spriteID: 64d16d7ced832334286a2c12a6a2b9fc
+      internalID: 837972736
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: stage1tilemap_99
+      name: stage1tilemap_96
       rect:
         serializedVersion: 2
         x: 1152
@@ -2429,8 +2363,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d96d1000b8bebc443b189a0862a70b02
-      internalID: -1311428605
+      spriteID: 17472ac87681f694688790c42d0da71c
+      internalID: -1980839466
       vertices: []
       indices: 
       edges: []
@@ -2439,7 +2373,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 59b9b8edfbbd6d34c9b256a3e21e69d7
+    spriteID: 827ffa98604d7ee43af08b5b4a44779a
     internalID: 0
     vertices: []
     indices: 
@@ -2450,105 +2384,102 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       stage1tilemap_0: 3364455247077063181
-      stage1tilemap_1: -818239659
-      stage1tilemap_10: -1740323550
-      stage1tilemap_11: 759862768
-      stage1tilemap_12: -1066687713
-      stage1tilemap_13: 1583093512
-      stage1tilemap_14: -1400570127
-      stage1tilemap_15: 209788259
-      stage1tilemap_16: 2107310147
-      stage1tilemap_17: 531320146
-      stage1tilemap_18: -1768623951
-      stage1tilemap_19: 443751325
-      stage1tilemap_2: 1959604961
-      stage1tilemap_20: -1731873195
-      stage1tilemap_21: 862891638
-      stage1tilemap_22: -1247020711
-      stage1tilemap_23: -1591787683
-      stage1tilemap_24: -350494284
-      stage1tilemap_25: -1005544195
-      stage1tilemap_26: 1752217623
-      stage1tilemap_27: 225497401
-      stage1tilemap_28: -1590503114
-      stage1tilemap_29: 1321835756
-      stage1tilemap_3: -2107592636
-      stage1tilemap_30: 605692406
-      stage1tilemap_31: -645240218
-      stage1tilemap_32: 777332532
-      stage1tilemap_33: 69132101
-      stage1tilemap_34: -1129759803
-      stage1tilemap_35: 1517929324
-      stage1tilemap_36: -431977477
-      stage1tilemap_37: -907308248
-      stage1tilemap_38: 1352536998
-      stage1tilemap_39: 790887850
-      stage1tilemap_4: -992991127
-      stage1tilemap_40: -610433234
-      stage1tilemap_41: -987540352
-      stage1tilemap_42: -538616783
-      stage1tilemap_43: 889288516
-      stage1tilemap_44: 1012807930
-      stage1tilemap_45: 2020302187
-      stage1tilemap_46: 792568655
-      stage1tilemap_47: 228304745
-      stage1tilemap_48: -1457063385
-      stage1tilemap_49: 592228997
-      stage1tilemap_5: 1273769288
-      stage1tilemap_50: -663409314
-      stage1tilemap_51: 228629204
-      stage1tilemap_52: -2040570505
-      stage1tilemap_53: 1184435210
-      stage1tilemap_54: -176230793
-      stage1tilemap_55: -1191593495
-      stage1tilemap_56: 1959786663
-      stage1tilemap_57: 2005835703
-      stage1tilemap_58: -1170196241
-      stage1tilemap_59: 965091110
-      stage1tilemap_6: -2092926181
-      stage1tilemap_60: 1549657674
-      stage1tilemap_61: -719361325
-      stage1tilemap_62: 739488145
-      stage1tilemap_63: -249029047
-      stage1tilemap_64: 1161092285
-      stage1tilemap_65: -933517585
-      stage1tilemap_66: -556021657
-      stage1tilemap_67: -1443727780
-      stage1tilemap_68: 1446228748
-      stage1tilemap_69: -913179519
-      stage1tilemap_7: -1190385258
-      stage1tilemap_70: -825206858
-      stage1tilemap_71: 1191630685
-      stage1tilemap_72: -990789363
-      stage1tilemap_73: -1462630363
-      stage1tilemap_74: -1921106302
-      stage1tilemap_75: 670085409
-      stage1tilemap_76: -938738053
-      stage1tilemap_77: 1099518588
-      stage1tilemap_78: -1596343221
-      stage1tilemap_79: 790472055
-      stage1tilemap_8: -38401015
-      stage1tilemap_80: 1273894246
-      stage1tilemap_81: 907728427
-      stage1tilemap_82: 183471951
-      stage1tilemap_83: 492715767
-      stage1tilemap_84: -2002663030
-      stage1tilemap_85: -195815612
-      stage1tilemap_86: -758807202
-      stage1tilemap_87: -1701248520
-      stage1tilemap_88: -1640426318
-      stage1tilemap_89: -723416785
-      stage1tilemap_9: 1785126432
-      stage1tilemap_90: -1521502863
-      stage1tilemap_91: -554661676
-      stage1tilemap_92: 1841068235
-      stage1tilemap_93: -1362381351
-      stage1tilemap_94: 49889974
-      stage1tilemap_95: 674224274
-      stage1tilemap_96: -983361877
-      stage1tilemap_97: 1014752300
-      stage1tilemap_98: 882718998
-      stage1tilemap_99: -1311428605
+      stage1tilemap_1: -2631050
+      stage1tilemap_10: -464510278
+      stage1tilemap_11: 1769042427
+      stage1tilemap_12: -1154978561
+      stage1tilemap_13: -288582037
+      stage1tilemap_14: -1206110462
+      stage1tilemap_15: -278522422
+      stage1tilemap_16: 103024639
+      stage1tilemap_17: -70141260
+      stage1tilemap_18: -1600897399
+      stage1tilemap_19: 505099678
+      stage1tilemap_2: 1958448054
+      stage1tilemap_20: -735689663
+      stage1tilemap_21: 705800131
+      stage1tilemap_22: -1041150616
+      stage1tilemap_23: -629186511
+      stage1tilemap_24: 1256207301
+      stage1tilemap_25: 1616448978
+      stage1tilemap_26: 1134379868
+      stage1tilemap_27: 1724156847
+      stage1tilemap_28: 1830541412
+      stage1tilemap_29: 1474457137
+      stage1tilemap_3: 248329903
+      stage1tilemap_30: 510612494
+      stage1tilemap_31: -2055809609
+      stage1tilemap_32: 1555685365
+      stage1tilemap_33: -1768360244
+      stage1tilemap_34: 1432412138
+      stage1tilemap_35: -2043568006
+      stage1tilemap_36: 1831633214
+      stage1tilemap_37: 1941261810
+      stage1tilemap_38: -493532321
+      stage1tilemap_39: 1636882236
+      stage1tilemap_4: 1363333363
+      stage1tilemap_40: -722564420
+      stage1tilemap_41: -1430786583
+      stage1tilemap_42: -1569483433
+      stage1tilemap_43: -1028007161
+      stage1tilemap_44: -1821053067
+      stage1tilemap_45: -143588000
+      stage1tilemap_46: -1711396821
+      stage1tilemap_47: -1188790039
+      stage1tilemap_48: 2146476421
+      stage1tilemap_49: 1936905261
+      stage1tilemap_5: -1077862513
+      stage1tilemap_50: -1230758666
+      stage1tilemap_51: 1867743273
+      stage1tilemap_52: -426844270
+      stage1tilemap_53: 2091343419
+      stage1tilemap_54: -1137962085
+      stage1tilemap_55: -845754506
+      stage1tilemap_56: -918555894
+      stage1tilemap_57: 815952073
+      stage1tilemap_58: 2027137072
+      stage1tilemap_59: -1700606806
+      stage1tilemap_6: -1539390059
+      stage1tilemap_60: 905338749
+      stage1tilemap_61: -8649611
+      stage1tilemap_62: -1031115411
+      stage1tilemap_63: 1952435418
+      stage1tilemap_64: -1088587460
+      stage1tilemap_65: -1535626485
+      stage1tilemap_66: 1651924535
+      stage1tilemap_67: -1575105717
+      stage1tilemap_68: -1105872257
+      stage1tilemap_69: -1788453858
+      stage1tilemap_7: 1257462226
+      stage1tilemap_70: 418080684
+      stage1tilemap_71: 1117748793
+      stage1tilemap_72: -242038847
+      stage1tilemap_73: 1268206109
+      stage1tilemap_74: 706008549
+      stage1tilemap_75: 60487792
+      stage1tilemap_76: 776398283
+      stage1tilemap_77: -744780192
+      stage1tilemap_78: 1805594330
+      stage1tilemap_79: 1506670720
+      stage1tilemap_8: -7242460
+      stage1tilemap_80: -1079848053
+      stage1tilemap_81: -637097378
+      stage1tilemap_82: -1615051968
+      stage1tilemap_83: -1731803269
+      stage1tilemap_84: -386911198
+      stage1tilemap_85: -1961603627
+      stage1tilemap_86: -1888337683
+      stage1tilemap_87: 1082430051
+      stage1tilemap_88: 459347997
+      stage1tilemap_89: -1004133111
+      stage1tilemap_9: 1768933822
+      stage1tilemap_90: -178994428
+      stage1tilemap_91: 1892994705
+      stage1tilemap_92: -1356201349
+      stage1tilemap_93: 699912500
+      stage1tilemap_94: 1300053123
+      stage1tilemap_95: 837972736
+      stage1tilemap_96: -1980839466
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
