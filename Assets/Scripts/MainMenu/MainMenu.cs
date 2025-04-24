@@ -5,6 +5,7 @@ public class MainMenu : MonoBehaviour
 {
     [SerializeField] private GameObject playMenu;
     [SerializeField] private GameObject CreditsMenu;
+    [SerializeField] private GameObject ControlsMenu;
     [SerializeField] private GameObject ConfirmMenu;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip buttonClickSound;
@@ -23,10 +24,17 @@ public class MainMenu : MonoBehaviour
         CreditsMenu.SetActive(true);
     }
 
+    public void OnControls()
+    {
+        playMenu.SetActive(false);
+        ControlsMenu.SetActive(true);
+    }
+
     public void OnReturn()
     {
         playMenu.SetActive(true);
         CreditsMenu.SetActive(false);
+        ControlsMenu.SetActive(false);
     }
 
     public void OnQuit()
