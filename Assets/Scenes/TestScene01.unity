@@ -1771,13 +1771,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 17
-  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":81.0000153,"yPos":158.999985},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"It''s
-    Broken","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":462.000061,"yPos":166.000015},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"Fuck
-    you","parentUIDs":[0],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":2},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":true,"xPos":289,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Enclave
+  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":-134.333344,"yPos":132.333313},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"It''s
+    Broken","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":246.666718,"yPos":139.333344},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"Fuck
+    you","parentUIDs":[0],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":2},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":true,"xPos":73.66666,"yPos":-4.66667175},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Enclave
     here, why isn''t your video feed working?","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Enclave
-    Soldier","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0.5},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":83.66667,"yPos":270},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"Who
+    Soldier","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0.5},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":-131.666656,"yPos":243.333313},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"Who
     the hell is this?","parentUIDs":[2],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Enclave
-    Soldier","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0.5},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":460,"yPos":271.000122},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"Who
+    Soldier","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0.5},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":244.666656,"yPos":244.333435},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"Who
     the fu - who is - what - I should kick your fucking ass, who is this?","parentUIDs":[4],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Enclave
     Soldier","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0.1,"Volume":0.5}]}'
   saveVersion: 110
@@ -1794,19 +1794,7 @@ MonoBehaviour:
   EndConversationFont: {fileID: 0}
   Event:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 446996696}
-        m_TargetAssemblyTypeName: DialogueEventTrigger, Assembly-CSharp
-        m_MethodName: ChangeConversation
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!4 &1538602043
 Transform:
   m_ObjectHideFlags: 0
