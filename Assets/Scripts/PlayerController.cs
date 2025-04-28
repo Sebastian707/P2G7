@@ -281,14 +281,18 @@ public class PlayerController : MonoBehaviour
         {
             isRespawning = true;
             movementSpeed = 0f;
+            StopGrapple();
             _rigidbody.AddForce(new Vector2(-_transform.localScale.x * deathRecoil.x, deathRecoil.y), ForceMode2D.Impulse);
+
             StartCoroutine(Respawn());
         }
     }
 
+
     private IEnumerator Respawn()
     {
         movementSpeed = defaultMovementSpeed;
+        _rigidbody.linearVelocity = Vector2.zero;
         yield return StartCoroutine(Fade(1));
         transform.position = checkpointPosition;
         yield return new WaitForSeconds(fadeLinger);
@@ -347,12 +351,17 @@ public class PlayerController : MonoBehaviour
         {
             currentTarget = closest;
 
+            if (transform.parent != null)
+            {
+                transform.SetParent(null);
+            }
+
             Vector2 direction = (currentTarget.position - transform.position).normalized;
             float distance = Vector2.Distance(transform.position, currentTarget.position);
 
             if (distance > snapDistance)
             {
-                transform.position = Vector2.MoveTowards(transform.position, currentTarget.position, grappleSpeed * Time.deltaTime);
+                rb.MovePosition(Vector2.MoveTowards(rb.position, currentTarget.position, grappleSpeed * Time.deltaTime));
             }
 
             line.positionCount = 2;
