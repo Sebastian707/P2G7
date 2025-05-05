@@ -1,0 +1,762 @@
+fileFormatVersion: 2
+guid: 835a65ee17321924090f76aaf185120b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 942824531186501436
+    second: StudentPaperCrumble_0
+  - first:
+      213: 1548591654458273466
+    second: StudentPaperCrumble_1
+  - first:
+      213: 4462443664840127994
+    second: StudentPaperCrumble_2
+  - first:
+      213: 5120626918271920826
+    second: StudentPaperCrumble_3
+  - first:
+      213: 8085467200704743080
+    second: StudentPaperCrumble_4
+  - first:
+      213: -91493933106123140
+    second: StudentPaperCrumble_5
+  - first:
+      213: 4514711229683326800
+    second: StudentPaperCrumble_6
+  - first:
+      213: -2839887786610157017
+    second: StudentPaperCrumble_7
+  - first:
+      213: 5906572754310686484
+    second: StudentPaperCrumble_8
+  - first:
+      213: 874702013804306594
+    second: StudentPaperCrumble_9
+  - first:
+      213: -865799301609596634
+    second: StudentPaperCrumble_10
+  - first:
+      213: 2280116577244351593
+    second: StudentPaperCrumble_11
+  - first:
+      213: -4528320678814867344
+    second: StudentPaperCrumble_12
+  - first:
+      213: 8542282336363897489
+    second: StudentPaperCrumble_13
+  - first:
+      213: 739180462261277778
+    second: StudentPaperCrumble_14
+  - first:
+      213: 4519508375868669969
+    second: StudentPaperCrumble_15
+  - first:
+      213: -8849956759512796221
+    second: StudentPaperCrumble_16
+  - first:
+      213: 7580061229623991889
+    second: StudentPaperCrumble_17
+  - first:
+      213: 7376461018116660088
+    second: StudentPaperCrumble_18
+  - first:
+      213: 8435963793255951652
+    second: StudentPaperCrumble_19
+  - first:
+      213: 1834826194271849136
+    second: StudentPaperCrumble_20
+  - first:
+      213: -8312872804970334920
+    second: StudentPaperCrumble_21
+  - first:
+      213: 1369479365337131371
+    second: StudentPaperCrumble_22
+  - first:
+      213: 7070671699276968724
+    second: StudentPaperCrumble_23
+  - first:
+      213: -2586949226305996845
+    second: StudentPaperCrumble_24
+  - first:
+      213: -6995367970416000694
+    second: StudentPaperCrumble_25
+  - first:
+      213: 7882356509179947854
+    second: StudentPaperCrumble_26
+  - first:
+      213: -870761256491668801
+    second: StudentPaperCrumble_27
+  - first:
+      213: -3170356824849347392
+    second: StudentPaperCrumble_28
+  - first:
+      213: 4676845578892589727
+    second: StudentPaperCrumble_29
+  - first:
+      213: -2479404205968774311
+    second: StudentPaperCrumble_30
+  - first:
+      213: 2365103379699816229
+    second: StudentPaperCrumble_31
+  - first:
+      213: -2539535808552469316
+    second: StudentPaperCrumble_32
+  - first:
+      213: -8371245181686246182
+    second: StudentPaperCrumble_33
+  - first:
+      213: 4434116276763172825
+    second: StudentPaperCrumble_34
+  - first:
+      213: 8393917470749756250
+    second: StudentPaperCrumble_35
+  - first:
+      213: -3943535289412006148
+    second: StudentPaperCrumble_36
+  - first:
+      213: 5059956427444880576
+    second: StudentPaperCrumble_37
+  - first:
+      213: -3590683667312431705
+    second: StudentPaperCrumble_38
+  - first:
+      213: 6620104616294906111
+    second: StudentPaperCrumble_39
+  - first:
+      213: -7033676397773404575
+    second: StudentPaperCrumble_40
+  - first:
+      213: 1426775850194164949
+    second: StudentPaperCrumble_41
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 7680
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: StudentPaperCrumble_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4320
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3745e27ae5951d00800000000000000
+      internalID: 942824531186501436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StudentPaperCrumble_1
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 4320
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abeae1aa7e3bd7510800000000000000
+      internalID: 1548591654458273466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StudentPaperCrumble_2
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 4320
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af5fcf0ced8cded30800000000000000
+      internalID: 4462443664840127994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StudentPaperCrumble_3
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 4320
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abaa6ea4d0f101740800000000000000
+      internalID: 5120626918271920826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StudentPaperCrumble_4
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 4320
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a604159499553070800000000000000
+      internalID: 8085467200704743080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StudentPaperCrumble_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3240
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7e2b1aa0c2fabef0800000000000000
+      internalID: -91493933106123140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StudentPaperCrumble_6
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 3240
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05fddb481f977ae30800000000000000
+      internalID: 4514711229683326800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StudentPaperCrumble_7
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 3240
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72a912dba11b698d0800000000000000
+      internalID: -2839887786610157017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StudentPaperCrumble_8
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 3240
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41760bc20ac58f150800000000000000
+      internalID: 5906572754310686484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StudentPaperCrumble_9
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 3240
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a0ef11e8d0932c00800000000000000
+      internalID: 874702013804306594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StudentPaperCrumble_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2160
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62957c45f101cf3f0800000000000000
+      internalID: -865799301609596634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StudentPaperCrumble_11
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 2160
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96c012942f994af10800000000000000
+      internalID: 2280116577244351593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StudentPaperCrumble_12
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 2160
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0702f2ea55c2821c0800000000000000
+      internalID: -4528320678814867344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StudentPaperCrumble_13
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 2160
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1926016a6884c8670800000000000000
+      internalID: 8542282336363897489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StudentPaperCrumble_14
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 2160
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2541efdc6b8124a00800000000000000
+      internalID: 739180462261277778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StudentPaperCrumble_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1080
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1100e072ce488be30800000000000000
+      internalID: 4519508375868669969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StudentPaperCrumble_16
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1080
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c33caf5733ae2580800000000000000
+      internalID: -8849956759512796221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StudentPaperCrumble_17
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 1080
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15ed2770789c13960800000000000000
+      internalID: 7580061229623991889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StudentPaperCrumble_18
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 1080
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87b1c5cb6347e5660800000000000000
+      internalID: 7376461018116660088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StudentPaperCrumble_19
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 1080
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42de313df50921570800000000000000
+      internalID: 8435963793255951652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StudentPaperCrumble_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bac72ec3bc967910800000000000000
+      internalID: 1834826194271849136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StudentPaperCrumble_21
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 835fcb43a3eb2ac80800000000000000
+      internalID: -8312872804970334920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 38e610662ac5cc741a88ae71f5ff0d68
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      StudentPaperCrumble_0: 942824531186501436
+      StudentPaperCrumble_1: 1548591654458273466
+      StudentPaperCrumble_10: -865799301609596634
+      StudentPaperCrumble_11: 2280116577244351593
+      StudentPaperCrumble_12: -4528320678814867344
+      StudentPaperCrumble_13: 8542282336363897489
+      StudentPaperCrumble_14: 739180462261277778
+      StudentPaperCrumble_15: 4519508375868669969
+      StudentPaperCrumble_16: -8849956759512796221
+      StudentPaperCrumble_17: 7580061229623991889
+      StudentPaperCrumble_18: 7376461018116660088
+      StudentPaperCrumble_19: 8435963793255951652
+      StudentPaperCrumble_2: 4462443664840127994
+      StudentPaperCrumble_20: 1834826194271849136
+      StudentPaperCrumble_21: -8312872804970334920
+      StudentPaperCrumble_3: 5120626918271920826
+      StudentPaperCrumble_4: 8085467200704743080
+      StudentPaperCrumble_5: -91493933106123140
+      StudentPaperCrumble_6: 4514711229683326800
+      StudentPaperCrumble_7: -2839887786610157017
+      StudentPaperCrumble_8: 5906572754310686484
+      StudentPaperCrumble_9: 874702013804306594
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
