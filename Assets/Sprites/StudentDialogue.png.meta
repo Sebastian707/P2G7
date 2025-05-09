@@ -1,14 +1,13 @@
 fileFormatVersion: 2
-guid: bf566e80557acbc45b9a695fcaa25327
-AssetOrigin:
-  serializedVersion: 1
-  productId: 168329
-  packageName: Dialogue Editor
-  packageVersion: 1.1.07
-  assetPath: Assets/DialogueEditor/Assets/DefaultSprites/BackingImage.png
-  uploadId: 542877
+guid: c31580dca27dac2498707aa02cbf4059
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -2309347980730736459
+    second: StudentDialogue_0
+  - first:
+      213: -3408861535106555055
+    second: StudentDialogue_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,17 +45,17 @@ TextureImporter:
     mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: 0
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
-  spriteBorder: {x: 7, y: 7, z: 7, w: 7}
+  spritePixelsToUnits: 1920
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -70,13 +69,13 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 1
+  applyGammaDecoding: 0
   swizzle: 50462976
-  cookieLightType: 1
+  cookieLightType: 0
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 64
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -89,7 +88,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: Standalone
-    maxTextureSize: 64
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -102,7 +101,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: Android
-    maxTextureSize: 64
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -115,12 +114,34 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: StudentDialogue_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 855de178a2acdf946b69531fa9353460
+      internalID: -3408861535106555055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 75efc9f3c708690459814342732b7c14
+    spriteID: 7278890caf5bfb745b593974b12d1542
     internalID: 0
     vertices: []
     indices: 
@@ -129,7 +150,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      StudentDialogue_0: -2309347980730736459
+      StudentDialogue_1: -3408861535106555055
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
