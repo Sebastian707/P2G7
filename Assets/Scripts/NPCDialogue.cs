@@ -81,6 +81,12 @@ public class NPCDialogue : MonoBehaviour
         {
             playerController.enabled = false; // Disable movement
         }
+        PlayerAnimator playerAnimator = player.GetComponent<PlayerAnimator>();
+        if (playerAnimator != null)
+        {
+            playerAnimator.enabled = false; // Disable movement
+        }
+
     }
 
     private void SpeechIndicator()

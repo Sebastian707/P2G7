@@ -656,6 +656,11 @@ namespace DialogueEditor
             {
                 playerController.enabled = true; // Re-enable movement
             }
+            PlayerAnimator playerAnimator = player.GetComponent<PlayerAnimator>();
+            if (playerAnimator != null)
+            {
+                playerAnimator.enabled = true; // Disable movement
+            }
 
 
 #if UNITY_EDITOR
