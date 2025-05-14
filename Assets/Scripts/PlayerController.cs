@@ -387,4 +387,15 @@ public class PlayerController : MonoBehaviour
         line.positionCount = 0;
     }
 
+    //for the dashbar
+    public int GetCurrentDashCharges()
+    {
+        return currentDashCharges;
+    }
+
+    public int GetMaxDashCharges()
+    {
+        return maxDashCharges;
+    }
+
 }
