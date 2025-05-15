@@ -1,0 +1,955 @@
+fileFormatVersion: 2
+guid: 0700e287806176f40be6136361ca0161
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4461581415849587047
+    second: Foregroun bottom_0
+  - first:
+      213: -7760727154819071696
+    second: Foregroun bottom_1
+  - first:
+      213: 542981324966408518
+    second: Foregroun bottom_2
+  - first:
+      213: -4497192955691307845
+    second: Foregroun bottom_3
+  - first:
+      213: 5629299357907226350
+    second: Foregroun bottom_4
+  - first:
+      213: 3769109047351635563
+    second: Foregroun bottom_5
+  - first:
+      213: -5451605846955609651
+    second: Foregroun bottom_6
+  - first:
+      213: -6657088562737894022
+    second: Foregroun bottom_7
+  - first:
+      213: -3511902896260457048
+    second: Foregroun bottom_8
+  - first:
+      213: 5416000428622987618
+    second: Foregroun bottom_9
+  - first:
+      213: -3394395512860775120
+    second: Foregroun bottom_10
+  - first:
+      213: -4606480383699366209
+    second: Foregroun bottom_11
+  - first:
+      213: -6045886785255838244
+    second: Foregroun bottom_12
+  - first:
+      213: 891820537151665786
+    second: Foregroun bottom_13
+  - first:
+      213: 5953834652170528070
+    second: Foregroun bottom_14
+  - first:
+      213: 7604736450009913157
+    second: Foregroun bottom_15
+  - first:
+      213: -1437311890496421092
+    second: Foregroun bottom_16
+  - first:
+      213: -8994913517824360474
+    second: Foregroun bottom_17
+  - first:
+      213: -3765709153168114631
+    second: Foregroun bottom_18
+  - first:
+      213: -2689967919241422372
+    second: Foregroun bottom_19
+  - first:
+      213: 3065498569343406581
+    second: Foregroun bottom_20
+  - first:
+      213: 628755976898340760
+    second: Foregroun bottom_21
+  - first:
+      213: -3555570242741671620
+    second: Foregroun bottom_22
+  - first:
+      213: -2528169608830255699
+    second: Foregroun bottom_23
+  - first:
+      213: 1940476194790606341
+    second: Foregroun bottom_24
+  - first:
+      213: 1698922817872965908
+    second: Foregroun bottom_25
+  - first:
+      213: 2118165703802260381
+    second: Foregroun bottom_26
+  - first:
+      213: 2590623609092311526
+    second: Foregroun bottom_27
+  - first:
+      213: -3294487408123885183
+    second: Foregroun bottom_28
+  - first:
+      213: -4661412219899339192
+    second: Foregroun bottom_29
+  - first:
+      213: -3144609691047782940
+    second: Foregroun bottom_30
+  - first:
+      213: -3554575216802836309
+    second: Foregroun bottom_31
+  - first:
+      213: -2611249967014995448
+    second: Foregroun bottom_32
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Foregroun bottom_0
+      rect:
+        serializedVersion: 2
+        x: 1817
+        y: 633
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 761f234c8a8baed30800000000000000
+      internalID: 4461581415849587047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foregroun bottom_1
+      rect:
+        serializedVersion: 2
+        x: 1832
+        y: 621
+        width: 25
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 031084255cb5c4490800000000000000
+      internalID: -7760727154819071696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foregroun bottom_2
+      rect:
+        serializedVersion: 2
+        x: 1764
+        y: 383
+        width: 156
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6413b4263ae098700800000000000000
+      internalID: 542981324966408518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foregroun bottom_3
+      rect:
+        serializedVersion: 2
+        x: 1797
+        y: 605
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbc61ad75d2c691c0800000000000000
+      internalID: -4497192955691307845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foregroun bottom_4
+      rect:
+        serializedVersion: 2
+        x: 1825
+        y: 588
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eee0562d0f94f1e40800000000000000
+      internalID: 5629299357907226350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foregroun bottom_5
+      rect:
+        serializedVersion: 2
+        x: 1902
+        y: 601
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6eea1f75b09e4430800000000000000
+      internalID: 3769109047351635563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foregroun bottom_6
+      rect:
+        serializedVersion: 2
+        x: 1863
+        y: 592
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc1b4c4bd510854b0800000000000000
+      internalID: -5451605846955609651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foregroun bottom_7
+      rect:
+        serializedVersion: 2
+        x: 1682
+        y: 510
+        width: 99
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7d21b319354d93a0800000000000000
+      internalID: -6657088562737894022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foregroun bottom_8
+      rect:
+        serializedVersion: 2
+        x: 1724
+        y: 460
+        width: 41
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8addab63ce6334fc0800000000000000
+      internalID: -3511902896260457048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foregroun bottom_9
+      rect:
+        serializedVersion: 2
+        x: 1726
+        y: 526
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 261cf63d1bf792b40800000000000000
+      internalID: 5416000428622987618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foregroun bottom_10
+      rect:
+        serializedVersion: 2
+        x: 1755
+        y: 542
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03de0cce34fa4e0d0800000000000000
+      internalID: -3394395512860775120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foregroun bottom_11
+      rect:
+        serializedVersion: 2
+        x: 1762
+        y: 510
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbe4bc84f7e7210c0800000000000000
+      internalID: -4606480383699366209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foregroun bottom_12
+      rect:
+        serializedVersion: 2
+        x: 1764
+        y: 514
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdde8945002b81ca0800000000000000
+      internalID: -6045886785255838244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foregroun bottom_13
+      rect:
+        serializedVersion: 2
+        x: 1688
+        y: 482
+        width: 40
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a76b250bd02606c00800000000000000
+      internalID: 891820537151665786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foregroun bottom_14
+      rect:
+        serializedVersion: 2
+        x: 1707
+        y: 478
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6452906421540a250800000000000000
+      internalID: 5953834652170528070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foregroun bottom_15
+      rect:
+        serializedVersion: 2
+        x: 1756
+        y: 483
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5475e497283798960800000000000000
+      internalID: 7604736450009913157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foregroun bottom_16
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 490
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1304876374ad0ce0800000000000000
+      internalID: -1437311890496421092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foregroun bottom_17
+      rect:
+        serializedVersion: 2
+        x: 1688
+        y: 415
+        width: 26
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ef38b800d5ab2380800000000000000
+      internalID: -8994913517824360474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foregroun bottom_18
+      rect:
+        serializedVersion: 2
+        x: 1712
+        y: 437
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93c3afd0a738dbbc0800000000000000
+      internalID: -3765709153168114631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foregroun bottom_19
+      rect:
+        serializedVersion: 2
+        x: 1716
+        y: 370
+        width: 32
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd91b64fd605baad0800000000000000
+      internalID: -2689967919241422372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foregroun bottom_20
+      rect:
+        serializedVersion: 2
+        x: 1725
+        y: 431
+        width: 37
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f19e2505b6da8a20800000000000000
+      internalID: 3065498569343406581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foregroun bottom_21
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 451
+        width: 6
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 897ed6dca3ac9b800800000000000000
+      internalID: 628755976898340760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foregroun bottom_22
+      rect:
+        serializedVersion: 2
+        x: 1732
+        y: 446
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c39ee63d3b318aec0800000000000000
+      internalID: -3555570242741671620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foregroun bottom_23
+      rect:
+        serializedVersion: 2
+        x: 1741
+        y: 401
+        width: 21
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dadfbb5b2232aecd0800000000000000
+      internalID: -2528169608830255699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foregroun bottom_24
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 455
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 506889d61d4fdea10800000000000000
+      internalID: 1940476194790606341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foregroun bottom_25
+      rect:
+        serializedVersion: 2
+        x: 1745
+        y: 446
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 411bf143d49c39710800000000000000
+      internalID: 1698922817872965908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foregroun bottom_26
+      rect:
+        serializedVersion: 2
+        x: 1656
+        y: 353
+        width: 69
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9b8c8e2c7c356d10800000000000000
+      internalID: 2118165703802260381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foregroun bottom_27
+      rect:
+        serializedVersion: 2
+        x: 1761
+        y: 404
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e900be527eb3f320800000000000000
+      internalID: 2590623609092311526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foregroun bottom_28
+      rect:
+        serializedVersion: 2
+        x: 1738
+        y: 388
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18947c14821a742d0800000000000000
+      internalID: -3294487408123885183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foregroun bottom_29
+      rect:
+        serializedVersion: 2
+        x: 1794
+        y: 383
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84e1c3188465f4fb0800000000000000
+      internalID: -4661412219899339192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foregroun bottom_30
+      rect:
+        serializedVersion: 2
+        x: 1820
+        y: 363
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e598d7952a1c54d0800000000000000
+      internalID: -3144609691047782940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foregroun bottom_31
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 515
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba05f0b5cac9baec0800000000000000
+      internalID: -3554575216802836309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foregroun bottom_32
+      rect:
+        serializedVersion: 2
+        x: 1454
+        y: 0
+        width: 466
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80a12507df9f2cbd0800000000000000
+      internalID: -2611249967014995448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
