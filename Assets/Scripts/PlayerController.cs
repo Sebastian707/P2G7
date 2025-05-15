@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private AudioClip doubleJumpSound;
     [SerializeField] private AudioClip dashSound;
     [SerializeField] private AudioClip respawnSound;
+    [SerializeField] private AudioClip DashRechargeSound;
     private AudioSource audioSource;
 
     [Header("Movement Settings")]
@@ -41,7 +42,7 @@ public class PlayerController : MonoBehaviour
     private int doubleJumpsLeft = 0;
 
     [Header("Dash Settings")]
-    [SerializeField] private bool CanDash = false;
+    [SerializeField] public bool CanDash = false;
     [SerializeField] private float dashDistance = 5f;
     [SerializeField] private float dashDuration = 0.5f;
     [SerializeField] private float maxDashCharges = 3;
@@ -152,6 +153,7 @@ public class PlayerController : MonoBehaviour
         {
             currentDashCharges++;
             dashStartTime = Time.time;
+            PlaySound(DashRechargeSound);
         }
 
         if (Input.GetKey(KeyCode.Q) && CanGrapple)
