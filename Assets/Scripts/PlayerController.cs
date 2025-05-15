@@ -44,13 +44,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool CanDash = false;
     [SerializeField] private float dashDistance = 5f;
     [SerializeField] private float dashDuration = 0.5f;
-    [SerializeField] private int maxDashCharges = 3;
+    [SerializeField] private float maxDashCharges = 3;
     [SerializeField] private float chargeRestoreRate = 1f;
 
-    private int currentDashCharges;
+    private float currentDashCharges;
     private bool isDashing = false;
     private float dashStartTime;
-    public TextMeshProUGUI dashText;
     private float defaultMovementSpeed;
 
     [Header("Respawn Settings")]
@@ -110,11 +109,6 @@ public class PlayerController : MonoBehaviour
         _transform = gameObject.GetComponent<Transform>();
         _rigidbody = gameObject.GetComponent<Rigidbody2D>();
 
-        if (dashText != null)
-        {
-            dashText.text = "Dashes: " + currentDashCharges + " / " + maxDashCharges;
-        }
-
         cameraFollowObject = cameraFollowGO.GetComponent<CameraFollowObject>();
 
         // Grapple Setup
@@ -158,11 +152,6 @@ public class PlayerController : MonoBehaviour
         {
             currentDashCharges++;
             dashStartTime = Time.time;
-        }
-
-        if (dashText != null)
-        {
-            dashText.text = CanDash ? "Dashes: " + currentDashCharges + " / " + maxDashCharges : "";
         }
 
         if (Input.GetKey(KeyCode.Q) && CanGrapple)
@@ -388,12 +377,12 @@ public class PlayerController : MonoBehaviour
     }
 
     //for the dashbar
-    public int GetCurrentDashCharges()
+    public float GetCurrentDashCharges()
     {
         return currentDashCharges;
     }
 
-    public int GetMaxDashCharges()
+    public float GetMaxDashCharges()
     {
         return maxDashCharges;
     }

@@ -272,7 +272,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Foreground top element_0: 2838836629675674901
+      Foreground top element_1: -7774904874112163758
+      Foreground top element_2: -5867577442289496081
+      Foreground top element_3: 7435327962059548699
+      Foreground top element_4: -700020428869601661
+      Foreground top element_5: -1517076173244381723
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
