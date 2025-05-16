@@ -14,6 +14,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TestScene01.unity
     guid: 6272dc07153a7b14d941206d25657102
+  - enabled: 1
+    path: Assets/Scenes/MainMenuScene.unity
+    guid: 4a084393c2a87f449a82de7bdfc8dad1
+  - enabled: 1
+    path: Assets/Scenes/MarcusFrameworkNewLevel.unity
+    guid: 3a70bceb61fbacd47a32338e0d4228d7
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
