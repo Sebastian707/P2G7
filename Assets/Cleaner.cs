@@ -23,6 +23,7 @@ public class Cleaner : MonoBehaviour
         // Wait a frame to ensure destruction
         yield return null;
 
+        yield return new WaitForSeconds(5f);
         // Now load the main menu
         SceneManager.LoadScene("MainMenuScene");
     }
